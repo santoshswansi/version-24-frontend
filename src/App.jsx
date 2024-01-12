@@ -1,12 +1,12 @@
-import './App.css'
+import "./App.css";
+import Register from "./components/Register";
 
 function App() {
-
   return (
     <>
-      Waiting to be worked out
+      <Register />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
