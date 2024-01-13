@@ -1,0 +1,85 @@
+.register-container {
+  color: black;
+  height: 90vh;
+  width: 90vw;
+  margin-top: 10vh;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.register-container > h1 {
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+  font-size: 50px;
+  margin-top: -40px;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.create-account {
+  font-family: "Oswald", sans-serif;
+  display: flex;
+  align-items: center;
+  margin-top: -30px;
+}
+
+.register-container > form {
+  background-color: rgba(255, 255, 255, 0.7);
+  height: 90%;
+  width: 80vw;
+  max-width: 500px;
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-bottom: 5vh;
+}
+
+.register-container > form > input {
+  height: 50px;
+  width: 250px;
+  border-radius: 5px;
+  border: none;
+  background-color: rgb(207, 207, 207);
+  padding: 5px;
+}
+
+.register-container > form > input:hover {
+  background-color: rgb(185, 185, 185);
+}
+
+.register-container > form > input::placeholder {
+  color: rgb(31, 30, 30);
+  font-weight: bold;
+}
+
+.submit-button {
+  font-weight: bolder;
+  font-size: 20px;
+  padding: 20px;
+  border-radius: 5px;
+  border: none;
+  background-color: rgb(172, 172, 172);
+  color: rgb(48, 48, 48);
+}
+
+.submit-button:active {
+  box-shadow: -2px -2px 0px 0px;
+}
+
+.register-footer {
+  margin-bottom: -30px;
+}
+
+.login-redirect {
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 10px;
+  background-color: rgb(53, 53, 53);
+  border-radius: 5px;
+  color: white;
+}

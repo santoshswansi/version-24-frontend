@@ -3,3 +3,11 @@
   margin: 0;
   box-sizing: border-box;
 }
+
+body {
+  background: url("/wp5426303-future-technology-hd-wallpapers.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100vw;
+}

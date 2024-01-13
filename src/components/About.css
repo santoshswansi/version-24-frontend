@@ -1,0 +1,10 @@
+.about-container {
+  color: white;
+  height: 90vh;
+  width: 90vw;
+  background-color: rgba(240, 248, 255, 0.3);
+  margin-left: 5vw;
+  margin-top: 5vh;
+  border-radius: 1vh;
+  padding: 10px;
+}
