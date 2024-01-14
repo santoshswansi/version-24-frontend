@@ -7,7 +7,7 @@ import About from "./components/About";
 function App() {
   return (
     <>
-      <BrowserRouter>
+      <BrowserRouter path="/">
         <Routes>
           <Route path="/register" element={<Register />} />
           <Route path="/about" element={<About />} />

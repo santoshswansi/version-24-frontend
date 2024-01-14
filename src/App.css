@@ -5,9 +5,13 @@
 }
 
 body {
+  padding: 0;
+  margin: 0;
   background: url("/wp5426303-future-technology-hd-wallpapers.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   height: 100vh;
   width: 100vw;
+  max-height: 100vh;
+  /* overflow-x: hidden; */
 }

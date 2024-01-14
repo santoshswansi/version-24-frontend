@@ -1,11 +1,15 @@
 import React, { useState } from "react";
 import axios from "axios";
+import { useNavigate } from "react-router";
 import "./Register.css";
+import versionLogo from "/version.svg";
+import themeLogo from "/geniusynth.svg";
 
 const Register = () => {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const navigate = useNavigate();
 
   //   console.log(username, email, password);
   const handleSubmit = async (e) => {
@@ -22,7 +26,15 @@ const Register = () => {
 
   return (
     <div className="register-container">
-      <h1>Version</h1>
+      <img
+        src={versionLogo}
+        className="version-logo"
+        onClick={() => {
+          navigate("/");
+        }}
+      />
+      <img src={themeLogo} className="theme-logo" />
+      {/* <h1>Version</h1> */}
       <form action="POST" onSubmit={(e) => handleSubmit(e)}>
         <h2 className="create-account">CREATE AN ACCOUNT</h2>
         <input

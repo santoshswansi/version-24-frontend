@@ -1,13 +1,16 @@
 .register-container {
   color: black;
-  height: 90vh;
-  width: 90vw;
-  margin-top: 10vh;
-  margin-inline: auto;
+  height: 100vh;
+  max-height: 100vh;
+  width: 100vw;
+  padding: 30px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
+  animation: starting 3s;
+  position: relative;
+  overflow-x: hidden;
 }
 
 .register-container > h1 {
@@ -17,6 +20,23 @@
   margin-top: -40px;
   margin-bottom: 20px;
   color: white;
+}
+
+.version-logo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 40px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.theme-logo {
+  position: absolute;
+  height: 50px;
+  top: 0;
+  right: 0;
+  margin: 10px;
 }
 
 .create-account {
@@ -36,7 +56,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-  margin-bottom: 5vh;
+  margin-block: 7vh;
 }
 
 .register-container > form > input {
@@ -53,7 +73,7 @@
 }
 
 .register-container > form > input::placeholder {
-  color: rgb(31, 30, 30);
+  color: rgba(31, 30, 30, 0.5);
   font-weight: bold;
 }
 
@@ -82,4 +102,13 @@
   background-color: rgb(53, 53, 53);
   border-radius: 5px;
   color: white;
+}
+
+@keyframes starting {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 100;
+  }
 }
