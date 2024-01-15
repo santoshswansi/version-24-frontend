@@ -1,11 +1,18 @@
 import React from "react";
+import { useNavigate } from "react-router";
+
 import VersionLogo from "/version.svg";
 import ThemeLogo from "/geniusynth.svg";
 import "./About.css";
 const About = () => {
+  const navigate = useNavigate();
   return (
     <div className="about-container">
-      <img src={VersionLogo} className="version-logo" />
+      <img
+        src={VersionLogo}
+        className="version-logo"
+        onClick={() => navigate("/")}
+      />
       <img src={ThemeLogo} className="theme-logo" />
 
       <div className="content-container">

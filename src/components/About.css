@@ -4,9 +4,9 @@
   width: 100vw;
   border-radius: 1vh;
   padding: 10px;
-  background: url("wp5426303-future-technology-hd-wallpapers.jpg");
-  background-repeat: repeat;
-  background-size: cover;
+  /* background: url("wp5426303-future-technology-hd-wallpapers.jpg");
+  background-repeat: no-repeat;
+  background-size: cover; */
   animation: starting 2s;
 }
 
