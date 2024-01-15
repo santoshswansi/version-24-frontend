@@ -1,10 +1,50 @@
 .about-container {
-  color: white;
-  height: 90vh;
-  width: 90vw;
-  background-color: rgba(240, 248, 255, 0.3);
-  margin-left: 5vw;
-  margin-top: 5vh;
+  color: black;
+  height: fit-content;
+  width: 100vw;
   border-radius: 1vh;
   padding: 10px;
+  background: url("wp5426303-future-technology-hd-wallpapers.jpg");
+  background-repeat: repeat;
+  background-size: cover;
+}
+
+.version-logo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 40px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.theme-logo {
+  position: absolute;
+  height: 50px;
+  top: 0;
+  right: 0;
+  margin: 10px;
+}
+
+.content-container {
+  width: 90vw;
+  max-width: 90vw;
+  margin-top: 70px;
+  margin-inline: auto;
+  background-color: rgba(240, 248, 255, 0.3);
+  height: fit-content;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.content-container > h1 {
+  text-align: center;
+  font-family: "Oswald", sans-serif;
+}
+
+.content-container > p {
+  margin-top: 10px;
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  text-align: center;
 }
