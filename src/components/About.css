@@ -7,6 +7,7 @@
   background: url("wp5426303-future-technology-hd-wallpapers.jpg");
   background-repeat: repeat;
   background-size: cover;
+  animation: starting 2s;
 }
 
 .version-logo {
@@ -47,4 +48,13 @@
   font-family: "Roboto", sans-serif;
   font-size: 20px;
   text-align: center;
+}
+
+@keyframes starting {
+  from {
+    opacity: 0%;
+  }
+  to {
+    opacity: 100%;
+  }
 }
