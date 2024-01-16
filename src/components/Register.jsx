@@ -35,38 +35,40 @@ const Register = () => {
       />
       <img src={themeLogo} className="theme-logo" />
       {/* <h1>Version</h1> */}
-      <form action="POST" onSubmit={(e) => handleSubmit(e)}>
-        <h2 className="create-account">CREATE AN ACCOUNT</h2>
-        <input
-          type="text"
-          id="username"
-          name="username"
-          placeholder="USERNAME"
-          required
-          onChange={(e) => setUsername(e.target.value)}
-        ></input>
-        <input
-          type="email"
-          id="email"
-          name="email"
-          placeholder="EMAIL"
-          required
-          onChange={(e) => setEmail(e.target.value)}
-        ></input>
-        <input
-          type="password"
-          id="password"
-          name="password"
-          required
-          placeholder="PASSWORD"
-          onChange={(e) => setPassword(e.target.value)}
-        ></input>
-        <button className="submit-button">Submit</button>
-        <p className="register-footer">Already have an account?</p>
-        <a href="/login" className="login-redirect">
-          Sign In
-        </a>
-      </form>
+      <div className="form-container">
+        <form action="POST" onSubmit={(e) => handleSubmit(e)}>
+          <h2 className="create-account">CREATE AN ACCOUNT</h2>
+          <input
+            type="text"
+            id="username"
+            name="username"
+            placeholder="USERNAME"
+            required
+            onChange={(e) => setUsername(e.target.value)}
+          ></input>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="EMAIL"
+            required
+            onChange={(e) => setEmail(e.target.value)}
+          ></input>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            required
+            placeholder="PASSWORD"
+            onChange={(e) => setPassword(e.target.value)}
+          ></input>
+          <button className="submit-button">Submit</button>
+          <p className="register-footer">Already have an account?</p>
+          <a href="/login" className="login-redirect">
+            Sign In
+          </a>
+        </form>
+      </div>
     </div>
   );
 };
