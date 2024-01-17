@@ -167,3 +167,12 @@
     opacity: 1;
   }
 }
+
+.register-redirect {
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 10px;
+  background-color: rgb(53, 53, 53);
+  border-radius: 5px;
+  color: white;
+}

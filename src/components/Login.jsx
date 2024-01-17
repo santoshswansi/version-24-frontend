@@ -1,10 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
+import axios from "axios";
 import versionLogo from "/version.svg";
-import themeLogo from "/geniusynth.svg";
+import themeLogo from "/geniusynth-2.svg";
 import "./Login.css";
 const Login = () => {
+  const [userMail, setUserMail] = useState("");
+  const [userPass, setUserPass] = useState("");
   function handleSubmit(e) {
     e.preventDefault();
+    axios.post("http://localhost:5000/login", {});
   }
 
   return (
@@ -24,18 +28,18 @@ const Login = () => {
           <input
             type="email"
             id="email"
-            name="email"
+            value="userMail"
             placeholder="EMAIL"
             required
-            onChange={(e) => setEmail(e.target.value)}
+            onChange={(e) => setUserMail(e.target.value)}
           ></input>
           <input
             type="password"
             id="password"
-            name="password"
+            value="userPass"
             required
             placeholder="PASSWORD"
-            onChange={(e) => setPassword(e.target.value)}
+            onChange={(e) => setUserPass(e.target.value)}
           ></input>
           <button className="submit-button">Submit</button>
           <p className="register-footer">Don't have an account</p>
