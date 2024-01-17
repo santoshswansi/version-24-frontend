@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-import versionLogo from "/version.svg";
+import versionLogo from "/version2.svg";
 import themeLogo from "/geniusynth-2.svg";
 import "./Login.css";
 const Login = () => {
@@ -8,7 +8,19 @@ const Login = () => {
   const [userPass, setUserPass] = useState("");
   function handleSubmit(e) {
     e.preventDefault();
-    axios.post("http://localhost:5000/login", {});
+    console.log(userMail, userPass);
+    const data = {
+      username: userMail,
+      password: userPass,
+    };
+    setUserMail("");
+    setUserPass("");
+    axios
+      .post("http://localhost:5000/login", {
+        data,
+      })
+      .then((response) => console.log(response.data))
+      .catch((err) => console.log(err));
   }
 
   return (
@@ -28,7 +40,7 @@ const Login = () => {
           <input
             type="email"
             id="email"
-            value="userMail"
+            name="username"
             placeholder="EMAIL"
             required
             onChange={(e) => setUserMail(e.target.value)}
@@ -36,7 +48,7 @@ const Login = () => {
           <input
             type="password"
             id="password"
-            value="userPass"
+            name="password"
             required
             placeholder="PASSWORD"
             onChange={(e) => setUserPass(e.target.value)}
