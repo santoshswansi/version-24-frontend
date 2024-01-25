@@ -1,16 +1,13 @@
 .register-container {
-  color: black;
   height: 100vh;
-  max-height: 100vh;
   width: 100vw;
+  position: relative;
   padding: 30px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  animation: starting 3s;
-  position: relative;
-  overflow-x: hidden;
+  z-index: 1;
 }
 
 .version-logo {
@@ -18,45 +15,93 @@
   top: 0;
   left: 0;
   height: 40px;
-  margin: 10px;
-  cursor: pointer;
+  rotate: 270deg;
+  transform: translateX(-45%) translateY(-140%);
+  animation: flicker 2s infinite;
 }
 
-.theme-logo {
+.register-theme-logo {
   position: absolute;
-  height: 50px;
-  top: 0;
+  height: 40px;
+  bottom: 0;
   right: 0;
-  margin: 10px;
+  rotate: 90deg;
+  transform: translate(-55%, -70%);
+  animation: flicker 2s infinite;
 }
 
 .create-account {
-  font-family: "Oswald", sans-serif;
   display: flex;
   align-items: center;
-  margin-top: -30px;
-  animation: text-flicker 2s linear infinite;
 }
 
 .form-container {
-  margin-top: 20px;
+  position: relative;
   height: 80vh;
-  border: 3px solid black;
-  border-radius: 10px;
   width: 70vw;
   display: flex;
   justify-content: center;
   align-items: center;
-  max-width: 530px;
-  animation: border-animation 1.3s infinite;
+  max-width: 500px;
+  background: white;
+}
+
+@media (max-width: 600px) {
+  .form-container {
+    position: absolute;
+    height: 99vh;
+    width: 99vw;
+    max-width: 99vw;
+  }
+}
+
+.form-container:before,
+.form-container:after {
+  content: "";
+  position: absolute;
+  left: -2px;
+  top: -2px;
+  background: linear-gradient(
+    45deg,
+    #fb0094,
+    #0000ff,
+    #00ff00,
+    #ffff00,
+    #ff0000,
+    #fb0094,
+    #0000ff,
+    #00ff00,
+    #ffff00,
+    #ff0000
+  );
+  background-size: 400%;
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  z-index: -1;
+  animation: steam 20s linear infinite;
+}
+
+@keyframes steam {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.form-container:after {
+  filter: blur(50px);
 }
 
 .form-container > form {
-  background-color: rgba(255, 255, 255, 0.7);
-  height: 75vh;
-  width: 68vw;
+  background-color: white;
+  height: 80vh;
+  width: 72vw;
   max-width: 500px;
-  font-family: "Roboto", sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -64,17 +109,29 @@
   margin-block: 7vh;
 }
 
+.form-container > form > h2 {
+  font-weight: 900;
+  /* color: white; */
+  text-transform: uppercase;
+}
+
 .form-container > form > input {
   height: 50px;
   width: 250px;
-  border-radius: 5px;
+  /* border-radius: 5px; */
   border: none;
-  background-color: rgb(207, 207, 207);
+  background-color: white;
   padding: 5px;
+  outline: none;
+  border-bottom: 1px solid black;
+}
+
+.form-container > form > input:focus {
+  border: 1px solid black;
 }
 
 .form-container > form > input:hover {
-  background-color: rgb(185, 185, 185);
+  background-color: rgba(255, 255, 255, 0.721);
 }
 
 .form-container > form > input::placeholder {
@@ -82,123 +139,64 @@
   font-weight: bold;
 }
 
-.submit-button {
-  font-weight: bolder;
-  font-size: 20px;
-  padding: 20px;
-  border-radius: 5px;
-  border: none;
-  background-color: rgb(172, 172, 172);
-  color: rgb(48, 48, 48);
+.form-container > form > input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button {
+  display: none;
 }
 
-.submit-button:active {
-  box-shadow: -2px -2px 0px 0px;
+@keyframes flicker {
+  0% {
+    opacity: 1;
+  }
+  7% {
+    opacity: 0.2;
+  }
+  10% {
+    opacity: 0.6;
+  }
+  20% {
+    opacity: 1;
+  }
+  23% {
+    opacity: 0.1;
+  }
+  40% {
+    opacity: 0.3;
+  }
+  45% {
+    opacity: 0.8;
+  }
+  51% {
+    opacity: 0.3;
+  }
+  58% {
+    opacity: 0.9;
+  }
+  65% {
+    opacity: 1;
+  }
+  77% {
+    opacity: 0.6;
+  }
+  83% {
+    opacity: 0.7;
+  }
+  95% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
-.register-footer {
-  margin-bottom: -30px;
-}
+/* .submit-button {
+  background-color: white;
+} */
 
 .login-redirect {
   text-decoration: none;
   text-transform: uppercase;
   padding: 10px;
   background-color: rgb(53, 53, 53);
-  border-radius: 5px;
   color: white;
-}
-
-@keyframes starting {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 100;
-  }
-}
-
-@keyframes border-animation {
-  0% {
-    border: none;
-  }
-  12.5% {
-    border: 1px solid black;
-  }
-  25% {
-    border: 2px solid black;
-  }
-  37.5% {
-    border: 3px solid black;
-  }
-  50% {
-    border: 4px solid black;
-  }
-  62.5% {
-    border: 3px solid black;
-  }
-  75% {
-    border: 2px solid black;
-  }
-  87.5% {
-    border: 1px solid black;
-  }
-  100% {
-    border: 0.2px solid black;
-  }
-}
-
-@keyframes text-flicker {
-  0% {
-    opacity: 0.4;
-    text-shadow: 0px 0px 29px grey;
-  }
-
-  2% {
-    opacity: 1;
-    text-shadow: 0px 0px 29px grey;
-  }
-  8% {
-    opacity: 0.8;
-    text-shadow: 0px 0px 29px blue;
-  }
-  9% {
-    opacity: 1;
-    text-shadow: 0px 0px 29px grey;
-  }
-  12% {
-    opacity: 0.5;
-    text-shadow: 0px 0px green;
-  }
-  20% {
-    opacity: 1;
-    text-shadow: 0px 0px 29px grey;
-  }
-  25% {
-    opacity: 0.6;
-    text-shadow: 0px 0px 29px red;
-  }
-  30% {
-    opacity: 1;
-    text-shadow: 0px 0px 29px grey;
-  }
-
-  70% {
-    opacity: 0.7;
-    text-shadow: 0px 0px 29px blue;
-  }
-
-  72% {
-    opacity: 0.8;
-    text-shadow: 0px 0px 29px green;
-  }
-
-  77% {
-    opacity: 0.9;
-    text-shadow: 0px 0px 29px grey;
-  }
-  100% {
-    opacity: 0.9;
-    text-shadow: 0px 0px 29px red;
-  }
 }

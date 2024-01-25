@@ -9,19 +9,30 @@ const Register = () => {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [phoneNumber, setPhoneNumber] = useState(null);
+  const [college, setCollege] = useState("");
+  const [rollNumber, setRollNumber] = useState(null);
   const navigate = useNavigate();
 
   //   console.log(username, email, password);
   const handleSubmit = async (e) => {
     e.preventDefault();
 
+    if (phoneNumber.toString().length != 10) {
+      alert("Not a valid Phone Number");
+      return;
+    }
     axios
       .post("http://localhost:4000/register", {
         username: username,
         email: email,
+        college: college,
         password: password,
+        rollNumber: rollNumber,
+        phoneNumber: phoneNumber,
       })
-      .response((data) => console.log(data));
+      .response((data) => console.log(data))
+      .catch((error) => console.log(error));
   };
 
   return (
@@ -33,7 +44,7 @@ const Register = () => {
           navigate("/");
         }}
       />
-      <img src={themeLogo} className="theme-logo" />
+      <img src={themeLogo} className="register-theme-logo" />
       {/* <h1>Version</h1> */}
       <div className="form-container">
         <form action="POST" onSubmit={(e) => handleSubmit(e)}>
@@ -53,6 +64,30 @@ const Register = () => {
             placeholder="EMAIL"
             required
             onChange={(e) => setEmail(e.target.value)}
+          ></input>
+          <input
+            type="text"
+            id="college"
+            name="college"
+            placeholder="COLLEGE"
+            required
+            onChange={(e) => setCollege(e.target.value)}
+          ></input>
+          <input
+            type="number"
+            id="rollNumber"
+            name="rollNumber"
+            placeholder="ROLL NUMBER"
+            required
+            onChange={(e) => setRollNumber(e.target.value)}
+          ></input>
+          <input
+            type="number"
+            id="phoneNumber"
+            name="phoneNumber"
+            placeholder="PHONE NUMBER"
+            required
+            onChange={(e) => setPhoneNumber(e.target.value)}
           ></input>
           <input
             type="password"

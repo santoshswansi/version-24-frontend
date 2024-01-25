@@ -2,16 +2,21 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
 }
 
 body {
   padding: 0;
   margin: 0;
-  background: url("/wp5426303-future-technology-hd-wallpapers.jpg");
-  background-size: cover;
+  background: linear-gradient(
+    90deg,
+    rgb(127, 199, 217, 0.4) 0%,
+    rgba(127, 199, 217, 1) 45%,
+    rgba(54, 84, 134, 0.8) 75%,
+    rgba(54, 84, 134, 1) 100%
+  );
   background-repeat: no-repeat;
   height: 100vh;
   width: 100vw;
   max-height: 100vh;
-  /* overflow-x: hidden; */
 }

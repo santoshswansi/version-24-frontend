@@ -1,11 +1,14 @@
 import React, { useState } from "react";
 import axios from "axios";
-import versionLogo from "/version2.svg";
-import themeLogo from "/geniusynth-2.svg";
+import versionLogo from "/version.svg";
+import themeLogo from "/geniusynth.svg";
 import "./Login.css";
+
 const Login = () => {
   const [userMail, setUserMail] = useState("");
   const [userPass, setUserPass] = useState("");
+  const [showDialog, setShowDialog] = useState(false);
+
   function handleSubmit(e) {
     e.preventDefault();
     console.log(userMail, userPass);
@@ -53,8 +56,11 @@ const Login = () => {
             placeholder="PASSWORD"
             onChange={(e) => setUserPass(e.target.value)}
           ></input>
+          <a href="/forgot-password" className="forgot-password">
+            Forgot password
+          </a>
           <button className="submit-button">Submit</button>
-          <p className="register-footer">Don't have an account</p>
+          <p className="register-footer">Don't have an account?</p>
           <a href="/register" className="register-redirect">
             Sign Up
           </a>
