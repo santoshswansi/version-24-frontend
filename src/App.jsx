@@ -1,12 +1,13 @@
-import './App.css'
+import "./App.css";
+import EventPage from "./EventPage";
+// import Button from "./components/Button";
 
 function App() {
-
   return (
     <>
-      Waiting to be worked out
+      <EventPage />
     </>
-  )
+  );
 }
 
-export default App
+export default App;

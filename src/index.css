@@ -1,0 +1,189 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Playfair+Display:wght@500&display=swap");
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  height: 100%;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+.event-card-container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1rem;
+  justify-content: center;
+  max-height: 100%;
+  animation: slideIn 3s ease 0s forwards;
+}
+
+.EventPage {
+  box-sizing: border-box;
+  background: url("assets/photos/3d-rendering-geometric-shapes-1.jpg") no-repeat;
+  background-size: 100vw 100vh;
+  background-position: center;
+  color: #0f1035;
+  display: flex;
+  font-family: "Montserrat";
+  font-weight: 300;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* background-blend-mode: saturation; */
+  /* backdrop-filter: grayscale(1) opacity(0.8); */
+  padding: 50px 30px 50px;
+  height: 100vh;
+  width: 100vw;
+  overflow-y: scroll;
+}
+.EventPage .title {
+  margin-bottom: auto;
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  width: 200px;
+  height: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  animation: slideDown 0.5s ease 0s forwards;
+}
+.EventPage .title h1 {
+  /* text-shadow: 0 0 20px #0f1035, 0 0 40px #0f1035, 0 0 80px #0f1035,
+    0 0 240px #0f1035; */
+  color: #0f1035;
+  font-size: 2.5rem;
+  font-weight: 500;
+  font-family: "Playfair Display";
+  background-image: linear-gradient(
+    -225deg,
+    /* #0f1035 0%, */ /* #dcf2f1 29%, */ #7fc7d9 0%,
+    #0f1035 30%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 2.5s linear 0s infinite;
+  display: inline-block;
+}
+
+@keyframes slideDown {
+  0% {
+    transform: translateY(-120px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    transform: perspective(500px) translate3d(0, 0, 120px);
+    opacity: 0;
+  }
+  100% {
+    transform: perspective(500px) translate3d(0);
+    opacity: 1;
+  }
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
+
+/* .Button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+} */
+
+.Button button {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: #dcf2f1;
+  padding: 15px 30px;
+  margin: 40px;
+  border: 2px solid #0f1035;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-family: "Playfair Display";
+  text-decoration: none;
+  letter-spacing: 2px;
+  color: #0f1035;
+  -webkit-box-reflect: below 0px linear-gradient(transparent, #0002);
+  transition: 0.25s;
+  transition-delay: 0.75s;
+}
+
+.Button button:hover {
+  transition-delay: 0.75s;
+  color: white;
+  box-shadow: 0 0 10px #0f1035, 0 0 20px #0f1035;
+}
+
+.Button button::before {
+  content: "";
+  position: absolute;
+  left: -20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 2px;
+  background: #0f1035;
+  box-shadow: 5px -8px 0 #0f1035, 5px 8px 0 #0f1035;
+  transition: width 0.25s, left 0.25s, height 0.25s, box-shadow 0.25s;
+  transition-delay: 0.5s, 0.25s, 0s, 0s;
+}
+
+.Button button:hover::before {
+  width: 60%;
+  height: 110%;
+  left: -2px;
+  box-shadow: 5px 0 0 #0f1035, 5px 0 0 #0f1035;
+  transition-delay: 0s, 0.25s, 0.5s, 0.5s;
+}
+
+.Button button::after {
+  content: "";
+  position: absolute;
+  right: -20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 2px;
+  background: #0f1035;
+  box-shadow: -5px -8px 0 #0f1035, -5px 8px 0 #0f1035;
+  transition: width 0.25s, left 0.25s, height 0.25s, box-shadow 0.25s;
+  transition-delay: 0.5s, 0.25s, 0s, 0s;
+}
+
+.Button button:hover::after {
+  width: 60%;
+  height: 110%;
+  right: -2px;
+  box-shadow: -5px 0 0 #0f1035, -5px 0 0 #0f1035;
+  transition-delay: 0s, 0.25s, 0.5s, 0.5s;
+}
+
+.Button button span {
+  position: relative;
+  z-index: 100;
+}
