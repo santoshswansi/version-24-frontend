@@ -1,3 +1,6 @@
+
+import EventPage from "./EventPage";
+// import Button from "./components/Button";
 import { Route, Routes } from "react-router";
 import { BrowserRouter } from "react-router-dom";
 import "./App.css";
@@ -9,6 +12,7 @@ import ForgotPassword from "./components/ForgotPassword";
 function App() {
   return (
     <>
+      <EventPage />
       <BrowserRouter path="/">
         <Routes>
           <Route path="/register" element={<Register />} />
