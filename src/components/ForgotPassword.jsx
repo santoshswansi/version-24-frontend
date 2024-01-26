@@ -4,7 +4,7 @@ import "./ForgotPassword.css";
 import versionLogo from "/version.svg";
 function ForgotPassword() {
   const [Email, setEmail] = useState("");
-  const [toggle, setToggle] = useState(true);
+  const [toggle, setToggle] = useState(false);
   const [newPassword, setNewPassword] = useState("");
   const [otp, setOTP] = useState(null);
 
