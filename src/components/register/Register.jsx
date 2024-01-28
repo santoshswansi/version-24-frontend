@@ -12,6 +12,7 @@ const Register = () => {
   const [college, setCollege] = useState("");
   const [rollNumber, setRollNumber] = useState(null);
 
+  const URL = import.meta.env.URL;
   //   console.log(username, email, password);
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -21,15 +22,15 @@ const Register = () => {
       return;
     }
     axios
-      .post("http://localhost:4000/register", {
-        username: username,
+      .post(`${URL}/signup`, {
+        name: username,
         email: email,
-        college: college,
+        university: college,
         password: password,
-        rollNumber: rollNumber,
-        phoneNumber: phoneNumber,
+        // rollNumber: rollNumber,
+        mobile: phoneNumber,
       })
-      .response((data) => console.log(data))
+      .then((response) => console.log(response.data))
       .catch((error) => console.log(error));
   };
 
