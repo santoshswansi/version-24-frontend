@@ -4,8 +4,7 @@ import versionLogo from "../../assets/svg/version.svg";
 import cross from "../../assets/svg/cross.svg";
 import arrowRight from "../../assets/svg/arrow-right.svg";
 
-function NavbarExpand({ expanded, setExpanded }) {
-
+function NavbarExpand({ expanded, setExpanded, focus }) {
   return (
     <div id="expand-nav-wrapper" className={expanded ? "on-expand" : ""}>
       <div id="expand-nav-header">
@@ -16,25 +15,33 @@ function NavbarExpand({ expanded, setExpanded }) {
       </div>
 
       <div id="expand-nav">
-        <a href="#home" className="expand-nav-item">
-          <sup>01</sup>
-          <span>Home</span>
+        <a href="/" className="expand-nav-item">
+          <sup className={focus == "home" ? "focus" : ""}>01</sup>
+          <span className={focus == "home" ? "focus underline" : ""}>Home</span>
         </a>
-        <a href="#theme" className="expand-nav-item">
-          <sup>02</sup>
-          <span>Theme</span>
+        <a href="/about" className="expand-nav-item">
+          <sup className={focus == "about" ? "focus" : ""}>02</sup>
+          <span className={focus == "about" ? "focus underline" : ""}>
+            About
+          </span>
         </a>
-        <a href="#events" className="expand-nav-item">
-          <sup>03</sup>
-          <span>Events</span>
+        <a href="/events" className="expand-nav-item">
+          <sup className={focus == "events" ? "focus" : ""}>03</sup>
+          <span className={focus == "events" ? "focus underline" : ""}>
+            Events
+          </span>
         </a>
-        <a href="#teams" className="expand-nav-item">
-          <sup>04</sup>
-          <span>Teams</span>
+        <a href="/teams" className="expand-nav-item">
+          <sup className={focus == "teams" ? "focus" : ""}>04</sup>
+          <span className={focus == "teams" ? "focus underline" : ""}>
+            Teams
+          </span>
         </a>
-        <a href="#login" className="expand-nav-item">
-          <sup>05</sup>
-          <span>Login</span>
+        <a href="/login" className="expand-nav-item">
+          <sup className={focus == "login" ? "focus" : ""}>05</sup>
+          <span className={focus == "login" ? "focus underline" : ""}>
+            Login
+          </span>
         </a>
       </div>
       <div id="connect">

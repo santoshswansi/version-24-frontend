@@ -1,3 +1,7 @@
 #nav-wrapped{
   position: relative;
 }
+
+.no-scroll {
+  overflow: hidden;
+}

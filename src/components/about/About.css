@@ -1,0 +1,94 @@
+.about-container {
+  color: black;
+  height: fit-content;
+  min-height: 40rem;
+  width: 100vw;
+  border-radius: 1vh;
+  padding: 10px;
+  background-position: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content-outside-container {
+  position: relative;
+  height: fit-content;
+  width: 91vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 91vw;
+  background-color: rgb(255, 255, 255, 0.7);
+}
+
+.content-container {
+  width: 90vw;
+  max-width: 90vw;
+  /* background-color: rgba(240, 248, 255, 0.3); */
+  height: fit-content;
+  min-height: 35rem;
+  padding: 30px;
+}
+
+.content-outside-container:before,
+.content-outside-container:after {
+  content: "";
+  position: absolute;
+  left: -2px;
+  top: -2px;
+  background: linear-gradient(
+    45deg,
+    #fb0094,
+    #0000ff,
+    #00ff00,
+    #ffff00,
+    #ff0000,
+    #fb0094,
+    #0000ff,
+    #00ff00,
+    #ffff00,
+    #ff0000
+  );
+  background-size: 400%;
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  z-index: -1;
+  animation: steam 20s linear infinite;
+}
+
+@keyframes steam {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.content-outside-container:after {
+  filter: blur(50px);
+}
+
+.content-container > h1 {
+  text-align: center;
+}
+
+.content-container > p {
+  margin-top: 20px;
+  font-size: 20px;
+  text-align: justify;
+  font-weight: 580;
+}
+
+@keyframes starting {
+  from {
+    opacity: 0%;
+  }
+  to {
+    opacity: 100%;
+  }
+}
