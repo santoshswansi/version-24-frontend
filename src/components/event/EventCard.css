@@ -7,7 +7,11 @@
   font-family: "Montserrat";
   font-weight: 300;
   /* From https://css.glass */
-  background: rgba(255, 255, 255, 0.2);
+  background: linear-gradient(
+    90deg,
+    rgba(54, 84, 134, 0.3),
+    rgba(220, 242, 241, 0.3)
+  );
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(2px);
@@ -29,7 +33,7 @@
 }
 
 .EventCard .front {
-  background-image: url("../assets/photos/young-adult-playing-futuristic-virtual-reality-game-generated-by-ai_188544-32742.jpg");
+  background-image: url("src/assets/photos/young-adult-playing-futuristic-virtual-reality-game-generated-by-ai_188544-32742.jpg");
   background-size: cover;
   background-position: center;
 }
