@@ -8,6 +8,7 @@
   left: 100vw;
   flex-direction: column;
   justify-content: space-between;
+  z-index: 5;
 }
 
 .on-expand {
@@ -145,4 +146,12 @@ sup {
   #connect {
     padding: 1.5rem;
   }
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.focus {
+  color: #365486;
 }

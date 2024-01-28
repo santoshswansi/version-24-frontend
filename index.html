@@ -12,8 +12,17 @@
     <title>Version '24</title>
   </head>
   <body>
+    <audio id="welcome-audio" autoplay muted loop>
+      <source src="./src/assets/audio/welcome-audio.mp3" type="audio/mpeg">
+      Your browser does not support audio
+    </audio>
     <div id="root"></div>
     <div class="modal-root"></div>
     <script type="module" src="/src/main.jsx"></script>
+    <script>
+      let audio = document.getElementById("welcome-audio")
+      localStorage.setItem("is-playing", "false")
+    </script>
   </body>
+
 </html>

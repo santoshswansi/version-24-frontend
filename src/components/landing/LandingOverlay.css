@@ -14,28 +14,9 @@
   width: 25rem;
 }
 
-#playing-music-svg-container {
-  background-color: #7FC7D9;
-  border-radius: 50%;
-  height: 2.2rem;
-  width: 2.2rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  left: 2rem;
-  bottom: 2rem;
-  cursor: pointer;
-}
-
 .black-bg {
   background-color: #0F1035 !important; 
 }
-
-#playing-music-svg-container svg {
-  padding: 2.5px;
-}
-
 
 @media (min-width: 350px) and (max-width: 499px) {
   #landing-content img {
@@ -46,12 +27,5 @@
 @media (max-width: 349px){
   #landing-content img {
     width: 15rem;
-  }
-}
-
-@media (max-width: 599px){
-  #playing-music-svg-container {
-    left: 1rem;
-    bottom: 1rem;
   }
 }
