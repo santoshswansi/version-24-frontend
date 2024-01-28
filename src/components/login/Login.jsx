@@ -6,23 +6,30 @@ import themeLogo from "/geniusynth.svg";
 import "./Login.css";
 
 const Login = () => {
+  const URL = import.meta.env.URL;
   const [userMail, setUserMail] = useState("");
   const [userPass, setUserPass] = useState("");
-
+  // console.log(userMail);
   function handleSubmit(e) {
     e.preventDefault();
-    console.log(userMail, userPass);
+    // console.log(userMail, userPass);
     const data = {
-      username: userMail,
+      email: userMail,
       password: userPass,
     };
-    setUserMail("");
-    setUserPass("");
+    // setUserMail("");
+    // setUserPass("");
+    console.log(data);
     axios
-      .post("http://localhost:5000/login", {
-        data,
+      .post(`${URL}/login`, { ...data })
+      .then((response) => {
+        console.log(response.data);
+
+        axios
+          .post(`${URL}/user`)
+          .then((response) => console.log(response))
+          .catch((err) => console.log(err));
       })
-      .then((response) => console.log(response.data))
       .catch((err) => console.log(err));
   }
 
@@ -35,13 +42,14 @@ const Login = () => {
       <img src={themeLogo} className="login-theme-logo" />
       {/* <h1>Version</h1> */}
       <div className="login-form-container">
-        <form action="POST" onSubmit={(e) => handleSubmit(e)}>
+        <form onSubmit={(e) => handleSubmit(e)}>
           <h2 className="sign-in">Sign In</h2>
           <input
             type="email"
             id="email"
-            name="username"
+            name="email"
             placeholder="EMAIL"
+            value={userMail}
             required
             onChange={(e) => setUserMail(e.target.value)}
           ></input>
@@ -50,6 +58,7 @@ const Login = () => {
             id="password"
             name="password"
             required
+            value={userPass}
             placeholder="PASSWORD"
             onChange={(e) => setUserPass(e.target.value)}
           ></input>

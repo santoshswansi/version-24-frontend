@@ -2,7 +2,7 @@
   height: 3rem;
   width: 100vw;
   position: fixed;
-  background-color: #0F1035;
+  /* background-color: #0f1035; */
   opacity: 0.2;
   bottom: 0.95rem;
   z-index: 2;
@@ -27,7 +27,7 @@
   z-index: 4;
 }
 
-@media (max-width: 599px){
+@media (max-width: 599px) {
   #footer-socials {
     right: 1rem;
     width: 8rem;
