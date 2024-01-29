@@ -11,8 +11,6 @@ const PlayingMusicSVG = ({isPlaying, setIsPlaying}) => {
     <div
       id="playing-music-svg-container"
       onClick={() => {
-        let value = isPlaying ? "false": "true";
-        localStorage.setItem("is-playing", value);
         setIsPlaying(isPlaying => !isPlaying);
       }}
       className={isPlaying ? "" : "black-bg"}
