@@ -22,7 +22,7 @@ const Register = () => {
       return;
     }
     axios
-      .post(`${URL}/signup`, {
+      .post(`http://localhost:4000/api/v1/signup`, {
         name: username,
         email: email,
         university: college,

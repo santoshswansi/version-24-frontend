@@ -6,7 +6,8 @@ import themeLogo from "/geniusynth.svg";
 import "./Login.css";
 
 const Login = () => {
-  const URL = import.meta.env.URL;
+  // const URL = import.meta.env.URL;
+  // console.log(URL);
   const [userMail, setUserMail] = useState("");
   const [userPass, setUserPass] = useState("");
   // console.log(userMail);
@@ -21,14 +22,18 @@ const Login = () => {
     // setUserPass("");
     console.log(data);
     axios
-      .post(`${URL}/login`, { ...data })
+      .post(
+        `http://localhost:4000/api/v1/login`,
+        { ...data },
+        { withCredentials: true }
+      )
       .then((response) => {
         console.log(response.data);
 
-        axios
-          .post(`${URL}/user`)
-          .then((response) => console.log(response))
-          .catch((err) => console.log(err));
+        // axios
+        //   .post(`${URL}/user`)
+        //   .then((response) => console.log(response))
+        //   .catch((err) => console.log(err));
       })
       .catch((err) => console.log(err));
   }
