@@ -1,10 +1,13 @@
 /* eslint-disable react/prop-types */
 import "./NavbarExpand.css";
+import {useNavigate} from "react-router-dom"
 import versionLogo from "../../assets/svg/version.svg";
 import cross from "../../assets/svg/cross.svg";
 import arrowRight from "../../assets/svg/arrow-right.svg";
 
 function NavbarExpand({ expanded, setExpanded, focus }) {
+  const navigate = useNavigate();
+
   return (
     <div id="expand-nav-wrapper" className={expanded ? "on-expand" : ""}>
       <div id="expand-nav-header">
@@ -15,29 +18,29 @@ function NavbarExpand({ expanded, setExpanded, focus }) {
       </div>
 
       <div id="expand-nav">
-        <a href="/" className="expand-nav-item">
+        <a className="expand-nav-item" onClick={() => navigate("/")}>
           <sup className={focus == "home" ? "focus" : ""}>01</sup>
           <span className={focus == "home" ? "focus underline" : ""}>Home</span>
         </a>
-        <a href="/about" className="expand-nav-item">
+        <a className="expand-nav-item" onClick={() => navigate("/about")}>
           <sup className={focus == "about" ? "focus" : ""}>02</sup>
           <span className={focus == "about" ? "focus underline" : ""}>
             About
           </span>
         </a>
-        <a href="/events" className="expand-nav-item">
+        <a className="expand-nav-item" onClick={() => navigate("/events")}>
           <sup className={focus == "events" ? "focus" : ""}>03</sup>
           <span className={focus == "events" ? "focus underline" : ""}>
             Events
           </span>
         </a>
-        <a href="/teams" className="expand-nav-item">
+        <a className="expand-nav-item" onClick={() => navigate("/teams")}>
           <sup className={focus == "teams" ? "focus" : ""}>04</sup>
           <span className={focus == "teams" ? "focus underline" : ""}>
             Teams
           </span>
         </a>
-        <a href="/login" className="expand-nav-item">
+        <a className="expand-nav-item" onClick={() => navigate("/login")}>
           <sup className={focus == "login" ? "focus" : ""}>05</sup>
           <span className={focus == "login" ? "focus underline" : ""}>
             Login

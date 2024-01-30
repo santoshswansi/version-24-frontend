@@ -44,6 +44,7 @@
   color: #0F1035;
   font-family: 'Playfair Display', serif;
   transition: all 0.3s ease-out;
+  cursor: pointer;
 }
 
 .expand-nav-item:hover span{
