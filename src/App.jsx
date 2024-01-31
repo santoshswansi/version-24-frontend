@@ -1,4 +1,3 @@
-
 import { Route, Routes } from "react-router";
 import { BrowserRouter } from "react-router-dom";
 import "./App.css";
@@ -6,29 +5,44 @@ import RegisterPage from "./containers/register/RegisterPage";
 import AboutPage from "./containers/about/AboutPage";
 import LoginPage from "./containers/login/LoginPage";
 import ForgotPasswordPage from "./containers/forgotPassword/ForgotPasswordPage";
-import HomePage from "./containers/home/HomePage";
-import EventsPage from "./containers/events/EventsPage";
-import TeamsPage from "./containers/teams/TeamsPage";
-import {RootContext} from "./context/RootContext"
+import { RootContext } from "./context/RootContext";
+import Cover from "./components/cover/Cover";
 import { useEffect, useState } from "react";
 
-function App() {
-  const [isPlaying, setIsPlaying] = useState(localStorage.getItem("is-playing") === "true");
+import HomePage from "./containers/home/HomePage";
+import TeamsPage from "./containers/teams/TeamsPage";
+import EventsPage from "./containers/events/EventsPage";
 
-  console.log(isPlaying);
+function App() {
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [isCoverOn, setIsCoverOn] = useState(true);
+  const [isPageLoading, setIsPageLoading] = useState(true);
+
+  document.onreadystatechange = () => {
+    setIsPageLoading(document.readyState !== "complete");
+  };
+
+
   useEffect(() => {
     let myAudio = document.getElementById("welcome-audio");
-    if(isPlaying){
+    if (isPlaying) {
       myAudio.muted = false;
       myAudio.play();
-    }else{ 
+    } else {
       myAudio.pause();
     }
-  }, [isPlaying])
+  }, [isPlaying]);
 
   return (
     <>
       <RootContext.Provider value={{ isPlaying, setIsPlaying }}>
+        {isCoverOn && (
+          <Cover
+            setIsPlaying={setIsPlaying}
+            setIsCoverOn={setIsCoverOn}
+            isPageLoading={isPageLoading}
+          />
+        )}
         <BrowserRouter path="/">
           <Routes>
             <Route path="/" element={<HomePage />} />
