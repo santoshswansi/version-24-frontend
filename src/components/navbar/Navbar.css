@@ -17,14 +17,14 @@
   display: flex !important;
   justify-content: space-between;
   align-items: center;
-  width: 25rem;
+  width: 28rem;
 }
 
 .collapse-nav-item{
-  text-decoration: none;
+  text-transform: uppercase;
   font-family: 'Montserrat', sans-serif;
   color: #0F1035;
-  width: 4.4rem;
+  width: 5rem;
   height: 2.2rem;
   display: flex;
   justify-content: center;
