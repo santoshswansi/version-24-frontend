@@ -3,28 +3,20 @@
 import "./Cover.css"
 import gensynthLogo from "../../assets/svg/logo.svg"
 
-const Cover = ({isPageLoading, setIsCoverOn, setIsPlaying}) => {
+const Cover = ({setIsCoverOn, setIsPlaying, setPlay}) => {
 
   return (
     <div id="cover-container">
-      <div id="loader-content">
-        <div id="loader-logo">
-          {isPageLoading ? (
-            <div id="loader">
-              <span className="bar"></span>
-              <span className="bar"></span>
-              <span className="bar"></span>
-            </div>
-          ) : (
+      <div id="content">
+        <div id="logo">
             <img id="gensynth-logo" src={gensynthLogo} alt="gensynth-logo" />
-          )}
         </div>
         <h3>Version '24</h3>
         <p>An all India meet for MCA</p>
         <div
           id="enter-button"
-          className={isPageLoading ? "hide" : ""}
           onClick={() => {
+            setPlay(true)
             setIsCoverOn(false);
             setIsPlaying(true);
           }}
@@ -34,8 +26,8 @@ const Cover = ({isPageLoading, setIsCoverOn, setIsPlaying}) => {
       </div>
       <p
         id="enter-without-audio"
-        className={isPageLoading ? "hide" : ""}
         onClick={() => {
+          setPlay(true)
           setIsCoverOn(false);
           setIsPlaying(false);
         }}
