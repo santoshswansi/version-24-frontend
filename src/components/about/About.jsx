@@ -4,14 +4,18 @@ import AboutContainer from "./AboutContainer";
 const About = () => {
   const infos = [
     {
+      header: "About Version",
       image: "/color-version-logo.png",
       text: "Embarking on its 31st edition, Version 2024,the annual All India MCA meet hosted by the students of NIT, Trichy, stands as the pinnacle event for MCA students nationwide. Since 1991, Version has been a platform for showcasing talent, fostering healthy competition, and promoting creativity. Beyond a mere contest, Version is an immersive experience featuring coding challenges, hackathons, workshops, and interactions with industry experts. As the star event for MCA at NIT, Trichy, it continues to be eagerly anticipated, drawing participants from across India. Version 2024 promises to uphold its legacy of excellence, offering participants a unique opportunity to push boundaries, forge connections, and leave an indelible mark on the landscape of MCA events. Get ready to celebrate innovation, talent, and camaraderie at the grand stage of Version 2024.",
     },
     {
+      header: "About Gensynth",
       image: "/color-gensynth-logo.png",
       text: `Version 2024 is set to unveil its groundbreaking theme, "Gensynth: Synthesized Brilliance of Gen AI." Gensynth, a clever portmanteau of "genius" and "synth," embodies the fusion of intelligence and creative synthesis in the context of Generative AI. It signifies the harmonious marriage of artificial intelligence's ingenious capabilities with the concept of synthesis, hinting at the generation of innovative and intelligent outputs. This theme underscores the event's dedication to exploring the symbiotic relationship between AI and creativity. In simpler terms, "Gensynth" conveys the idea of smart and creative technology coming together to create something entirely new, reflecting the essence of Version 2024's focus on the convergence of artificial intelligence and imaginative ingenuity. Get ready for a transformative experience at Gensynth as we delve into the boundless possibilities of Generative AI`,
     },
     {
+      header: "Message from HOD",
+      image: "/michael-sir.jpg",
       text: `In the ever-accelerating currents of change, one unwavering truth
 remains - "Satyameva Jayate" (Truth Alone Triumphs). This mantra
 echoes through the corridors of the Department of Computer
@@ -46,6 +50,8 @@ celebration of truth, knowledge, and the transformative power of
 Generative AI.`,
     },
     {
+      header: "Message from Staff Advisor",
+      image: "/sangeetha-mam.jpg",
       text: `Every technological leap begins with a spark of innovation, and as we
 gather for the 31st edition of Version - All India MCA Meet, themed
 'GENSYNTH: Synthesized Brilliance of Gen-AI,' we are not just celebrating
@@ -87,15 +93,20 @@ country, making this edition a resounding success`,
     <AboutContainer
       divName={index % 2 ? "right-container" : "left-container"}
       key={index}
+      index={index}
       image={info.image}
       text={info.text}
+      header={info.header}
     />
   ));
 
   return (
     <div className="about-container">
       <div className="content-outside-container">
-        <div className="content-container">{subinfos}</div>
+        <div className="content-container">
+          <h1>About Us</h1>
+          {subinfos}
+        </div>
       </div>
     </div>
   );
