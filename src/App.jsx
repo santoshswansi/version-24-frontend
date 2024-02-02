@@ -1,4 +1,3 @@
-
 import { Route, Routes } from "react-router";
 import { BrowserRouter } from "react-router-dom";
 import "./App.css";
@@ -9,25 +8,27 @@ import ForgotPasswordPage from "./containers/forgotPassword/ForgotPasswordPage";
 import HomePage from "./containers/home/HomePage";
 import EventsPage from "./containers/events/EventsPage";
 import TeamsPage from "./containers/teams/TeamsPage";
-import {RootContext} from "./context/RootContext"
+import { RootContext } from "./context/RootContext";
 import { useEffect, useState } from "react";
 
 function App() {
-  const [isPlaying, setIsPlaying] = useState(localStorage.getItem("is-playing") === "true");
+  const [isPlaying, setIsPlaying] = useState(
+    localStorage.getItem("is-playing") === "true"
+  );
 
   console.log(isPlaying);
   useEffect(() => {
     let myAudio = document.getElementById("welcome-audio");
-    if(isPlaying){
+    if (isPlaying) {
       myAudio.muted = false;
       myAudio.play();
-    }else{ 
+    } else {
       myAudio.pause();
     }
-  }, [isPlaying])
+  }, [isPlaying]);
 
   return (
-    <>
+    <div>
       <RootContext.Provider value={{ isPlaying, setIsPlaying }}>
         <BrowserRouter path="/">
           <Routes>
@@ -41,7 +42,7 @@ function App() {
           </Routes>
         </BrowserRouter>
       </RootContext.Provider>
-    </>
+    </div>
   );
 }
 

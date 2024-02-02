@@ -9,6 +9,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  font-family: "Montserrat", sans-serif;
+  animation: loading 2s ease-out;
 }
 
 .content-outside-container {
@@ -20,6 +22,7 @@
   align-items: center;
   max-width: 91vw;
   background-color: rgb(255, 255, 255, 0.7);
+  border-radius: 10px;
 }
 
 .content-container {
@@ -39,22 +42,20 @@
   top: -2px;
   background: linear-gradient(
     45deg,
-    #fb0094,
-    #0000ff,
-    #00ff00,
-    #ffff00,
-    #ff0000,
-    #fb0094,
-    #0000ff,
-    #00ff00,
-    #ffff00,
-    #ff0000
+    #dcf2f1,
+    #7fc7d9,
+    #365486,
+    #0f1035,
+    #7fc7d9,
+    #dcf2f1,
+    #365486
   );
   background-size: 400%;
   width: calc(100% + 4px);
   height: calc(100% + 4px);
   z-index: -1;
-  animation: steam 20s linear infinite;
+  border-radius: 10px;
+  animation: steam 12s linear infinite;
 }
 
 @keyframes steam {
@@ -73,7 +74,7 @@
   filter: blur(50px);
 }
 
-.content-container > h1 {
+/* .content-container > h1 {
   text-align: center;
 }
 
@@ -82,13 +83,33 @@
   font-size: 20px;
   text-align: justify;
   font-weight: 580;
+} */
+
+.left-container,
+.right-container {
+  margin-block: 20px;
+  width: 100%;
 }
 
-@keyframes starting {
-  from {
-    opacity: 0%;
-  }
-  to {
-    opacity: 100%;
-  }
+.left-container > img,
+.right-container > img {
+  height: 200px;
+}
+
+.left-container {
+  margin-left: 40px;
+}
+
+.right-container {
+  margin-right: 40px;
+}
+
+.left-container > p {
+  border-left: 2px solid black;
+  padding: 10px;
+}
+
+.right-container > p {
+  border-right: 2px solid black;
+  padding: 10px;
 }

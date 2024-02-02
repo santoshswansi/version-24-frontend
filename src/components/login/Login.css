@@ -9,6 +9,17 @@
   justify-content: space-around;
   z-index: 1;
   font-family: "Montserrat", sans-serif;
+  animation: loading 1.5s ease;
+}
+
+@keyframes loading {
+  from {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .login-version-logo {
@@ -39,9 +50,8 @@
   justify-content: center;
   align-items: center;
   max-width: 500px;
+  border-radius: 10px;
 }
-
-
 
 .login-form-container:before,
 .login-form-container:after {
@@ -51,22 +61,20 @@
   top: -2px;
   background: linear-gradient(
     45deg,
-    #fb0094,
-    #0000ff,
-    #00ff00,
-    #ffff00,
-    #ff0000,
-    #fb0094,
-    #0000ff,
-    #00ff00,
-    #ffff00,
-    #ff0000
+    #dcf2f1,
+    #7fc7d9,
+    #365486,
+    #0f1035,
+    #7fc7d9,
+    #dcf2f1,
+    #365486
   );
   background-size: 400%;
   width: calc(100% + 4px);
   height: calc(100% + 4px);
   z-index: -1;
-  animation: steam 20s linear infinite;
+  animation: steam 12s linear infinite;
+  border-radius: 10px;
 }
 
 @keyframes steam {
@@ -95,11 +103,13 @@
   align-items: center;
   justify-content: space-evenly;
   margin-block: 7vh;
+  border-radius: 10px;
 }
 
 .login-form-container > form > h2 {
   font-weight: 900;
   text-transform: uppercase;
+  color: #365486;
 }
 
 .login-form-container > form > input {
@@ -110,7 +120,7 @@
   background-color: white;
   padding: 5px;
   outline: none;
-  border-bottom: 1px solid black;
+  border-bottom: 0.1rem solid #365486;
 }
 
 .login-form-container > form > input:hover {
@@ -118,22 +128,23 @@
 }
 
 .login-form-container > form > input:focus {
-  border: 1px solid black;
+  border: 0.1rem solid #365486;
+  border-radius: 5px;
 }
 
 .login-form-container > form > input::placeholder {
-  color: rgba(31, 30, 30, 0.5);
+  color: rgba(54, 84, 134, 0.7);
   font-weight: bold;
 }
 
 .forgot-password {
   text-decoration: none;
-  color: rgb(0, 60, 255);
+  color: #365486;
   cursor: pointer;
 }
 
 .forgot-password:visited {
-  color: rgb(0, 60, 255);
+  color: #365486;
 }
 
 @keyframes flicker {
@@ -182,26 +193,30 @@
 }
 
 .submit-button {
-  background-color: rgb(0, 132, 255);
+  background-color: #7fc7d9;
   border: none;
   height: 50px;
   width: 100px;
-  color: white;
+  color: #365486;
   font-weight: 600;
   font-size: medium;
   cursor: pointer;
+  box-shadow: 0 5px #365486;
+  border-radius: 5px;
 }
 
 .submit-button:active {
-  box-shadow: -1px -1px 0px 0px solid black;
+  box-shadow: none;
+  transform: translateY(5px);
 }
 
 .register-redirect {
   text-decoration: none;
   text-transform: uppercase;
   padding: 10px;
-  background-color: rgb(53, 53, 53);
-  color: white;
+  background-color: #0f1035;
+  color: #dcf2f1;
+  border-radius: 5px;
 }
 
 .forgot-password-box {
@@ -212,8 +227,8 @@
   border: 2px solid yellow;
   height: 200px;
   width: 400px;
-  background-color: white;
-  color: black;
+  background-color: #dcf2f1;
+  color: #0f1035;
 }
 
 @media (max-width: 600px) {

@@ -1,8 +1,9 @@
 /* eslint-disable react/no-unescaped-entities */
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import axios from "axios";
 // import versionLogo from "/version.svg";
-import themeLogo from "/geniusynth.svg";
+import themeLogo from "/gensynth.svg";
 import "./Login.css";
 
 const Login = () => {
@@ -10,6 +11,7 @@ const Login = () => {
   // console.log(URL);
   const [userMail, setUserMail] = useState("");
   const [userPass, setUserPass] = useState("");
+  const navigate = useNavigate();
   // console.log(userMail);
   function handleSubmit(e) {
     e.preventDefault();
@@ -28,14 +30,19 @@ const Login = () => {
         { withCredentials: true }
       )
       .then((response) => {
-        console.log(response.data);
-
+        // console.log(response.data);
+        if (response.data?.status === "success") {
+          alert(response.data?.message);
+          navigate("/");
+        }
         // axios
         //   .post(`${URL}/user`)
         //   .then((response) => console.log(response))
         //   .catch((err) => console.log(err));
       })
-      .catch((err) => console.log(err));
+      .catch((err) => {
+        alert(err.response.data.error);
+      });
   }
 
   return (
