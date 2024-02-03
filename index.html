@@ -20,6 +20,7 @@
     <div class="modal-root"></div>
     <script type="module" src="/src/main.jsx"></script>
     <script>
+      
       function addOnBlurListener(onBlurCallback, onFocusCallback) {
         var hidden, visibilityState, visibilityChange; // check the visiblility of the page
 
@@ -58,7 +59,6 @@
           console.log(audios[i]);
           audios[i].muted = true;
         }
-
       }
 
       function unMuteAudio() {
@@ -69,7 +69,6 @@
           console.log(audios[i]);
           audios[i].muted = false;
         }
-
       }
 
       addOnBlurListener(muteAudio, unMuteAudio);
