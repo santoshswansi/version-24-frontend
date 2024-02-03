@@ -10,7 +10,7 @@
   align-items: center;
   justify-content: center;
   font-family: "Montserrat", sans-serif;
-  animation: loading 2s ease-out;
+  animation: loading 2s ease;
 }
 
 .content-outside-container {
@@ -104,14 +104,13 @@
 }
 
 .sub-container > div > img {
-  width: 70%;
+  width: 60%;
 }
 
 .sub-container-text {
   /* background-color: wheat; */
   display: flex;
   flex-direction: column;
-  flex: 1;
   justify-content: space-between;
 }
 

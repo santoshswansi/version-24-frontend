@@ -25,7 +25,7 @@ technological excellence. As we stand on the precipice of the unknown,
 we draw inspiration from this timeless motto to invite you to the 31st
 edition of our prestigious annual technological festival - “Version”, the
 All India MCA Meet.
-Scheduled to unfold on 22nd March, this year's edition carries a theme
+Scheduled to unfold on 21st March, this year's edition carries a theme
 that resonates with the cutting edge of technology - "Generative AI." It's
 an exploration of the limitless possibilities and the transformative
 impact of Artificial Intelligence. Our students at the Department of
