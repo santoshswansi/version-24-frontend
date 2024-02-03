@@ -1,9 +1,13 @@
+
 import { Suspense, lazy } from "react";
 import { Route, Routes } from "react-router";
 import { BrowserRouter } from "react-router-dom";
 import "./App.css";
 import RegisterPage from "./containers/register/RegisterPage";
 import ForgotPasswordPage from "./containers/forgotPassword/ForgotPasswordPage";
+import HomePage from "./containers/home/HomePage";
+import EventsPage from "./containers/events/EventsPage";
+import TeamsPage from "./containers/teams/TeamsPage";
 import { RootContext } from "./context/RootContext";
 import Cover from "./components/cover/Cover";
 import { useEffect, useState } from "react";
@@ -32,7 +36,7 @@ function App() {
   }, [isPlaying]);
 
   return (
-    <>
+    <div>
       <RootContext.Provider value={{ isPlaying, setIsPlaying }}>
         {isCoverOn && (
           <Cover
@@ -56,7 +60,7 @@ function App() {
           </BrowserRouter>
         </Suspense>
       </RootContext.Provider>
-    </>
+    </div>
   );
 }
 

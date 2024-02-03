@@ -1,8 +1,9 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import "./Register.css";
 // import versionLogo from "/version.svg";
-import themeLogo from "/geniusynth.svg";
+import themeLogo from "/gensynth.svg";
 
 const Register = () => {
   const [username, setUsername] = useState("");
@@ -11,7 +12,7 @@ const Register = () => {
   const [phoneNumber, setPhoneNumber] = useState(null);
   const [college, setCollege] = useState("");
   const [rollNumber, setRollNumber] = useState(null);
-
+  const navigate = useNavigate();
   const URL = import.meta.env.URL;
   //   console.log(username, email, password);
   const handleSubmit = async (e) => {
@@ -30,8 +31,14 @@ const Register = () => {
         // rollNumber: rollNumber,
         mobile: phoneNumber,
       })
-      .then((response) => console.log(response.data))
-      .catch((error) => console.log(error));
+      .then((response) => {
+        if (response.data?.status === "success") alert(response.data.message);
+        navigate("/login");
+      })
+      .catch((error) => {
+        // console.log(error);
+        alert(error.response.data.error);
+      });
   };
 
   return (

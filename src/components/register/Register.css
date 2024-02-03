@@ -9,6 +9,7 @@
   justify-content: space-around;
   z-index: 1;
   font-family: "Montserrat", sans-serif;
+  animation: loading 1.5s ease;
 }
 
 .version-logo {
@@ -23,11 +24,11 @@
 
 .register-theme-logo {
   position: absolute;
-  height: 40px;
+  height: 110px;
   bottom: 0;
   right: 0;
   rotate: 90deg;
-  transform: translate(-55%, -70%);
+  transform: translate(-30%, -50%);
   animation: flicker 2s infinite;
 }
 
@@ -45,6 +46,7 @@
   align-items: center;
   max-width: 500px;
   background: white;
+  border-radius: 10px;
 }
 
 .form-container:before,
@@ -55,22 +57,20 @@
   top: -2px;
   background: linear-gradient(
     45deg,
-    #fb0094,
-    #0000ff,
-    #00ff00,
-    #ffff00,
-    #ff0000,
-    #fb0094,
-    #0000ff,
-    #00ff00,
-    #ffff00,
-    #ff0000
+    #dcf2f1,
+    #7fc7d9,
+    #365486,
+    #0f1035,
+    #7fc7d9,
+    #dcf2f1,
+    #365486
   );
   background-size: 400%;
   width: calc(100% + 4px);
   height: calc(100% + 4px);
+  border-radius: 10px;
   z-index: -1;
-  animation: steam 20s linear infinite;
+  animation: steam 12s linear infinite;
 }
 
 @keyframes steam {
@@ -103,7 +103,7 @@
 
 .form-container > form > h2 {
   font-weight: 900;
-  /* color: white; */
+  color: #365486;
   text-transform: uppercase;
 }
 
@@ -115,11 +115,12 @@
   background-color: white;
   padding: 5px;
   outline: none;
-  border-bottom: 1px solid black;
+  border-bottom: 0.1rem solid #365486;
 }
 
 .form-container > form > input:focus {
-  border: 1px solid black;
+  border: 0.1rem solid #365486;
+  border-radius: 5px;
 }
 
 .form-container > form > input:hover {
@@ -127,7 +128,7 @@
 }
 
 .form-container > form > input::placeholder {
-  color: rgba(31, 30, 30, 0.5);
+  color: rgba(54, 84, 134, 0.7);
   font-weight: bold;
 }
 
@@ -189,10 +190,10 @@ input::-webkit-outer-spin-button {
   text-decoration: none;
   text-transform: uppercase;
   padding: 10px;
-  background-color: rgb(53, 53, 53);
-  color: white;
+  background-color: #0f1035;
+  color: #dcf2f1;
+  border-radius: 5px;
 }
-
 
 @media (max-width: 600px) {
   .form-container {
