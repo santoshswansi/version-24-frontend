@@ -1,0 +1,70 @@
+#cover-container {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  display: flex;  
+  align-items: center;
+  justify-content: center;
+  z-index: 12000; 
+  background-color: #7FC7D9;
+  overflow: hidden;
+  flex-direction: column;
+  font-family: "Montserrat", sans-serif;  
+  color: #0F1035;
+}
+
+#content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  margin-top: 2rem;
+  height: 13rem;
+}
+
+#content h3 {
+  font-size: 3rem;
+  margin-top: 1rem;
+  font-weight: 900;
+}
+
+#cover-container #enter-without-audio {
+  position: relative;
+  bottom: -10rem;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+#enter-button {
+  cursor: pointer;
+  background-color: #0F1035;
+  padding: 0.4rem 0.8rem;
+  color: #DCF2F1;
+  border-radius: 5px;
+  font-size: 1.4rem;
+  box-shadow: 0 8px #365486;
+  margin-top: 1rem;
+}
+
+#enter-button:active {
+  box-shadow: 0 5px #365486;
+  transform: translateY(4px);
+}
+
+#enter-without-audio {
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  position: absolute !important;
+  bottom: 1rem !important;
+}
+
+#gensynth-logo{
+  height: 81px;
+  width: 81px;
+}
+
+#logo {
+  height: 80px;
+}

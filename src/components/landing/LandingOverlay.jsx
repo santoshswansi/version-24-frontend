@@ -6,14 +6,14 @@ import { RootContext } from "../../context/RootContext";
 
 
 import MusicPlayingSVG from "./MusicPlayingSVG";
-import geniusynth from "../../assets/svg/geniusynth.svg";
+import gensynth from "../../assets/svg/gensynth.svg";
 
 const LandingOverlay = () => {
   const { isPlaying, setIsPlaying } = useContext(RootContext);
 
   return (
     <div id="landing-content">
-      <img src={geniusynth} alt="geniusynth" />
+      <img src={gensynth} alt="gensynth" />
       <MusicPlayingSVG isPlaying={isPlaying} setIsPlaying={setIsPlaying}/>
     </div>
   );

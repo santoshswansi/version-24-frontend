@@ -35,12 +35,12 @@
   justify-content: center;
   flex-direction: column;
   margin: auto;
-  width: 11.5rem;
+  width: 12rem;
 }
 
 .expand-nav-item {
   text-decoration: none;
-  font-size: 3.2rem;
+  font-size: 3.5rem;
   color: #0F1035;
   font-family: 'Playfair Display', serif;
   transition: all 0.3s ease-out;
