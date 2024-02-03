@@ -22,13 +22,25 @@ const Footer = () => {
       <div id="footer">
         <h3>Version '24</h3>
         <div id="socials">
-          <a href="">
+          <a
+            href="https://www.instagram.com/version_nit_trichy/"
+            target="_blank"
+            rel="noreferrer"
+          >
             <img src={instagram} />
           </a>
-          <a href="">
+          <a
+            href="https://www.linkedin.com/in/version-mca-nitt-4b2384221/"
+            target="_blank"
+            rel="noreferrer"
+          >
             <img src={linkedin} />
           </a>
-          <a href="">
+          <a
+            href="https://www.youtube.com/version_nit_trichy"
+            target="_blank"
+            rel="noreferrer"
+          >
             <img src={youtube} />
           </a>
         </div>

@@ -59,15 +59,27 @@ function NavbarExpand({ expanded, setExpanded, focus }) {
           </a>
         </div>
         <div id="socials">
-          <a href="">
+          <a
+            href="https://www.instagram.com/version_nit_trichy/"
+            target="_blank"
+            rel="noreferrer"
+          >
             <img src={arrowRight} className="arrow" alt="arrow" />
             INSTAGRAM
           </a>
-          <a href="">
+          <a
+            href="https://www.linkedin.com/in/version-mca-nitt-4b2384221/"
+            target="_blank"
+            rel="noreferrer"
+          >
             <img src={arrowRight} className="arrow" alt="arrow" />
             LINKEDIN
           </a>
-          <a href="">
+          <a
+            href="https://www.youtube.com/version_nit_trichy"
+            target="_blank"
+            rel="noreferrer"
+          >
             <img src={arrowRight} className="arrow" alt="arrow" />
             YOUTUBE
           </a>
