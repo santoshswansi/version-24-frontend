@@ -22,26 +22,6 @@
   }
 }
 
-.login-version-logo {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 40px;
-  rotate: 270deg;
-  transform: translateX(-45%) translateY(-140%);
-  animation: flicker 4s infinite;
-}
-
-.login-theme-logo {
-  height: 40px;
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  rotate: 90deg;
-  transform: translate(-55%, -70%);
-  animation: flicker 2s infinite;
-}
-
 .login-form-container {
   position: relative;
   height: 80vh;

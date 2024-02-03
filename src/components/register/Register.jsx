@@ -3,7 +3,6 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import "./Register.css";
 // import versionLogo from "/version.svg";
-import themeLogo from "/gensynth.svg";
 
 const Register = () => {
   const [username, setUsername] = useState("");
@@ -43,7 +42,6 @@ const Register = () => {
 
   return (
     <div className="register-container">
-      <img src={themeLogo} className="register-theme-logo" />
       <div className="form-container">
         <form action="POST" onSubmit={(e) => handleSubmit(e)}>
           <h2 className="create-account">CREATE AN ACCOUNT</h2>

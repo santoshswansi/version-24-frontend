@@ -3,7 +3,6 @@
 .event-card-container {
   display: flex;
   flex-wrap: wrap;
-  padding: 1rem;
   justify-content: center;
   animation: slideIn 3s ease 0s forwards;
 }
