@@ -2,8 +2,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
-// import versionLogo from "/version.svg";
-import themeLogo from "/gensynth.svg";
 import "./Login.css";
 
 const Login = () => {
@@ -47,12 +45,6 @@ const Login = () => {
 
   return (
     <div className="login-container">
-      {/* <img
-        src={versionLogo}
-        className="login-version-logo"
-      /> */}
-      {/* <img src={themeLogo} className="login-theme-logo" /> */}
-      {/* <h1>Version</h1> */}
       <div className="login-form-container">
         <form onSubmit={(e) => handleSubmit(e)}>
           <h2 className="sign-in">Sign In</h2>
