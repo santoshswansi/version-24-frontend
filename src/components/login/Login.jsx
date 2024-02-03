@@ -51,7 +51,7 @@ const Login = () => {
         src={versionLogo}
         className="login-version-logo"
       /> */}
-      <img src={themeLogo} className="login-theme-logo" />
+      {/* <img src={themeLogo} className="login-theme-logo" /> */}
       {/* <h1>Version</h1> */}
       <div className="login-form-container">
         <form onSubmit={(e) => handleSubmit(e)}>
