@@ -182,9 +182,18 @@ input::-webkit-outer-spin-button {
   }
 }
 
-/* .submit-button {
-  background-color: white;
-} */
+.submit-button {
+  background-color: #7fc7d9;
+  border: none;
+  height: 50px;
+  width: 100px;
+  color: #365486;
+  font-weight: 600;
+  font-size: medium;
+  cursor: pointer;
+  box-shadow: 0 5px #365486;
+  border-radius: 5px;
+}
 
 .login-redirect {
   text-decoration: none;
