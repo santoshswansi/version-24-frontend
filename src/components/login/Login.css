@@ -103,8 +103,10 @@
   border-bottom: 0.1rem solid #365486;
 }
 
-.login-form-container > form > input:hover {
-  background-color: rgba(255, 255, 255, 0.721);
+@media (hover: hover){
+  .login-form-container > form > input:hover {
+    background-color: rgba(255, 255, 255, 0.721);
+  }
 }
 
 .login-form-container > form > input:focus {

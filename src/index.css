@@ -117,10 +117,12 @@
   transition-delay: 0.75s;
 }
 
-.Button button:hover {
-  transition-delay: 0.75s;
-  color: white;
-  box-shadow: 0 0 10px #0f1035, 0 0 20px #0f1035;
+@media (hover: hover){
+  .Button button:hover {
+    transition-delay: 0.75s;
+    color: white;
+    box-shadow: 0 0 10px #0f1035, 0 0 20px #0f1035;
+  }
 }
 
 .Button button::before {
@@ -137,12 +139,14 @@
   transition-delay: 0.5s, 0.25s, 0s, 0s;
 }
 
-.Button button:hover::before {
-  width: 60%;
-  height: 110%;
-  left: -2px;
-  box-shadow: 5px 0 0 #0f1035, 5px 0 0 #0f1035;
-  transition-delay: 0s, 0.25s, 0.5s, 0.5s;
+@media (hover: hover){
+  .Button button:hover::before {
+    width: 60%;
+    height: 110%;
+    left: -2px;
+    box-shadow: 5px 0 0 #0f1035, 5px 0 0 #0f1035;
+    transition-delay: 0s, 0.25s, 0.5s, 0.5s;
+  }
 }
 
 .Button button::after {
@@ -159,12 +163,14 @@
   transition-delay: 0.5s, 0.25s, 0s, 0s;
 }
 
-.Button button:hover::after {
-  width: 60%;
-  height: 110%;
-  right: -2px;
-  box-shadow: -5px 0 0 #0f1035, -5px 0 0 #0f1035;
-  transition-delay: 0s, 0.25s, 0.5s, 0.5s;
+@media (hover: hover){
+  .Button button:hover::after {
+    width: 60%;
+    height: 110%;
+    right: -2px;
+    box-shadow: -5px 0 0 #0f1035, -5px 0 0 #0f1035;
+    transition-delay: 0s, 0.25s, 0.5s, 0.5s;
+  }
 }
 
 .Button button span {

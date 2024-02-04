@@ -26,10 +26,12 @@
   transition: transform 800ms;
 }
 
-.EventCard:hover > .card {
-  transform: rotateY(180deg);
-  transform-style: preserve-3d;
-  transition-delay: 0.25s;
+@media (hover: hover){
+  .EventCard:hover > .card {
+    transform: rotateY(180deg);
+    transform-style: preserve-3d;
+    transition-delay: 0.25s;
+  }
 }
 
 .EventCard .front {

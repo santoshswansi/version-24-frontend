@@ -49,13 +49,13 @@ function NavbarExpand({ expanded, setExpanded, focus }) {
       </div>
       <div id="connect">
         <div id="contact">
-          <a href="">
+          <a href="mailto:versionmcanitt@gmail.com">
             <img src={arrowRight} className="arrow" alt="arrow" />
-            call-version@gmail.com
+            versionmcanitt@gmail.com
           </a>
-          <a href="">
+          <a href="tel:8116002093">
             <img src={arrowRight} className="arrow" alt="arrow" />
-            +91-1192949499
+            8116002093
           </a>
         </div>
         <div id="socials">

@@ -47,16 +47,19 @@
   cursor: pointer;
 }
 
-.expand-nav-item:hover span{
-  font-style: italic;
+@media (hover: hover){
+  .expand-nav-item:hover span{
+    font-style: italic;
+  }
 }
-
 .expand-nav-item sup {
   transition: margin-right 0.3s ease-out;
 }
 
-.expand-nav-item:hover sup {
-  margin-right: 1rem;
+@media (hover: hover){
+  .expand-nav-item:hover sup {
+    margin-right: 1rem;
+  }
 }
 
 sup {
@@ -82,8 +85,10 @@ sup {
   justify-content: center;
 }
 
-#cross-container:hover {
-  cursor: pointer;
+@media (hover: hover) {
+  #cross-container:hover {
+    cursor: pointer;
+  }
 }
 
 #connect {
@@ -104,7 +109,7 @@ sup {
   justify-content: center;
   align-items: flex-start;
   font-size: 0.8rem;
-  width: 12rem;
+  width: 14rem;
   margin-left: 2rem;
 }
 
@@ -123,9 +128,11 @@ sup {
   width: 5.6rem;
 }
 
-#connect a:hover > .arrow {
-  display:initial;
-  margin-right: 0.5rem; 
+@media (hover: hover){
+  #connect a:hover > .arrow {
+    display:initial;
+    margin-right: 0.5rem; 
+  }
 }
 
 @media (max-width: 599px) {
