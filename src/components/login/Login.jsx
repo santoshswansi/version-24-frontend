@@ -8,19 +8,15 @@ const Login = () => {
   const [userMail, setUserMail] = useState("");
   const [userPass, setUserPass] = useState("");
   const navigate = useNavigate();
+
   function handleSubmit(e) {
     e.preventDefault();
     const data = {
       email: userMail,
       password: userPass,
     };
-
     axios
-      .post(
-        `http://localhost:4000/api/v1/login`,
-        { ...data },
-        { withCredentials: true }
-      )
+      .post(`${__URL__}/login`, { ...data }, { withCredentials: true })
       .then((response) => {
         // console.log(response.data);
         if (response.data?.status === "success") {

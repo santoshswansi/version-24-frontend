@@ -13,7 +13,7 @@ function ForgotPassword() {
     e.preventDefault();
     setToggle(false);
     axios
-      .post("http://localhost:3000", { email: Email })
+      .post(`${__URL__}/`, { email: Email })
       .then((res) => {
         console.log(res);
       })
