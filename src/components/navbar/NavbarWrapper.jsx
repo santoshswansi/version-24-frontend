@@ -12,9 +12,9 @@ function NavbarWrapper({focus, overlay}) {
 
   useEffect(() => {
     if(expanded) {
-      document.body.classList.add("no-scroll");
+      document.getElementsByTagName("html")[0].style.overflow = "hidden";
     }else {
-      document.body.classList.remove("no-scroll");
+      document.getElementsByTagName("html")[0].style.overflow = "visible";
     }
   }, [expanded])
 

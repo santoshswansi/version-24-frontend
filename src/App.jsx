@@ -31,6 +31,14 @@ function App() {
     }
   }, [isPlaying]);
 
+  useEffect(() => {
+    if(isCoverOn) {
+      document.getElementsByTagName("html")[0].style.overflow = "hidden";
+    }else {
+      document.getElementsByTagName("html")[0].style.overflow = "visible";
+    }
+  }, [isCoverOn])
+
   return (
     <div>
       <RootContext.Provider value={{ isPlaying, setIsPlaying }}>

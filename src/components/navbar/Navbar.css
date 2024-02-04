@@ -52,8 +52,10 @@
   }
 }
 
-.collapse-nav-item:hover {
-  animation: rollAnimation 0.3s ease-out forwards;
+@media (hover: hover){
+  .collapse-nav-item:hover {
+    animation: rollAnimation 0.3s ease-out forwards;
+  }
 }
 
 #dots {
@@ -73,8 +75,10 @@
   justify-content: center;
 }
 
-#dots-container:hover {
-  cursor: pointer;
+@media (hover: hover){
+  #dots-container:hover {
+    cursor: pointer;
+  }
 }
 
 #dots:hover{
