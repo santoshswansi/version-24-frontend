@@ -25,7 +25,7 @@ function ForgotPassword() {
     e.preventDefault();
     setToggle(true);
     axios
-      .post("http://localhost:3000", {
+      .post(`${__URL__}/forgot-password`, {
         otp,
         newPassword,
       })
