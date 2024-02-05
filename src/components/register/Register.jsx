@@ -2,7 +2,6 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import "./Register.css";
-// import versionLogo from "/version.svg";
 
 const Register = () => {
   const [username, setUsername] = useState("");

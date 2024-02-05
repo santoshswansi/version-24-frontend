@@ -82,14 +82,8 @@
 }
 
 .sub-container {
-  /* margin-block: 60px; */
   width: 100%;
   display: flex;
-  /* align-items: center; */
-  /* justify-content: space-evenly; */
-  /* border: 2px solid black; */
-  /* padding: 10px; */
-  /* background-color: #7fc7d9; */
   min-height: 90vh;
 }
 
@@ -106,6 +100,7 @@
 @media (max-width: 900px) {
   .sub-container {
     flex-direction: column;
+    min-height: fit-content;
   }
 
   .sub-container > div {
