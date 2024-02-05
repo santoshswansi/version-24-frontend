@@ -1,5 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 import { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import "./ForgotPassword.css";
 function ForgotPassword() {
@@ -7,13 +8,15 @@ function ForgotPassword() {
   const [toggle, setToggle] = useState(true);
   const [newPassword, setNewPassword] = useState("");
   const [otp, setOTP] = useState(null);
-
+  const navigate = useNavigate();
   const handleSubmit = (e) => {
     e.preventDefault();
     setToggle(false);
     axios
-      .post("http://localhost:3000", { email: Email })
-      .then((res) => {console.log(res)})
+      .post(`${__URL__}/`, { email: Email })
+      .then((res) => {
+        console.log(res);
+      })
       .catch((err) => console.log(err));
     setEmail("");
   };
@@ -22,11 +25,13 @@ function ForgotPassword() {
     e.preventDefault();
     setToggle(true);
     axios
-      .post("http://localhost:3000", {
+      .post(`${__URL__}/forgot-password`, {
         otp,
         newPassword,
       })
-      .then((res) => {console.log(res)})
+      .then((res) => {
+        console.log(res);
+      })
       .catch((err) => console.log(err));
   };
 
@@ -52,9 +57,9 @@ function ForgotPassword() {
             <p>
               Don't have an account?
               <span>
-                <a className="signup-redirect" href="./register">
+                <Link to="/register" className="signup-redirect">
                   Sign Up
-                </a>
+                </Link>
               </span>
             </p>
           </form>

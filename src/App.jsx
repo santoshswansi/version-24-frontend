@@ -1,4 +1,3 @@
-
 import { Suspense, lazy } from "react";
 import { Route, Routes } from "react-router";
 import { BrowserRouter } from "react-router-dom";
@@ -13,7 +12,7 @@ import Loader from "./components/loader/Loader";
 const HomePage = lazy(() => import("./containers/home/HomePage"));
 const TeamsPage = lazy(() => import("./containers/teams/TeamsPage"));
 const EventsPage = lazy(() => import("./containers/events/EventsPage"));
-const AboutPage =  lazy(() => import("./containers/about/AboutPage"));
+const AboutPage = lazy(() => import("./containers/about/AboutPage"));
 const LoginPage = lazy(() => import("./containers/login/LoginPage"));
 const NotFoundPage = lazy(() => import("./containers/notFound/NotFoundPage"));
 
@@ -49,7 +48,7 @@ function App() {
             setIsCoverOn={setIsCoverOn}
             setPlay={setPlay}
           />
-        )} 
+        )}
         <Suspense fallback={<Loader />}>
           <BrowserRouter path="/">
             <Routes>

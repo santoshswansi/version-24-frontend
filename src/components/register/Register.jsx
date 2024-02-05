@@ -22,7 +22,7 @@ const Register = () => {
       return;
     }
     axios
-      .post(`http://localhost:4000/api/v1/signup`, {
+      .post(`${__URL__}/signup`, {
         name: username,
         email: email,
         university: college,
@@ -95,9 +95,14 @@ const Register = () => {
           ></input>
           <button className="submit-button">Submit</button>
           <p className="register-footer">Already have an account?</p>
-          <a href="/login" className="login-redirect">
+          <button
+            className="login-redirect"
+            onClick={() => {
+              navigate("/login");
+            }}
+          >
             Sign In
-          </a>
+          </button>
         </form>
       </div>
     </div>

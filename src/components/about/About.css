@@ -103,6 +103,26 @@
   padding: 20px;
 }
 
+@media (max-width: 900px) {
+  .sub-container {
+    flex-direction: column;
+  }
+
+  .sub-container > div {
+    width: 100%;
+  }
+
+  .sub-container > div > img {
+    max-height: 200px;
+    max-width: 200px;
+    object-fit: cover;
+  }
+
+  .right-container {
+    flex-direction: column-reverse;
+  }
+}
+
 .sub-container > div > img {
   width: 60%;
 }

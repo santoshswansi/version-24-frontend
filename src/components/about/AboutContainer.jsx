@@ -1,8 +1,7 @@
 const AboutContainer = ({ divName, image, text, header }) => {
-  console.log(image, text, header);
   const container =
     divName === "left-container" ? (
-      <div className="sub-container">
+      <div className={`sub-container ${divName}`}>
         <div>
           <img src={image} />
         </div>
@@ -12,7 +11,7 @@ const AboutContainer = ({ divName, image, text, header }) => {
         </div>
       </div>
     ) : (
-      <div className="sub-container">
+      <div className={`sub-container ${divName}`}>
         <div className="sub-container-text">
           <h2>{header}</h2>
           <p>{text}</p>

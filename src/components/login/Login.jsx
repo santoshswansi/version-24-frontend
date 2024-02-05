@@ -5,28 +5,18 @@ import axios from "axios";
 import "./Login.css";
 
 const Login = () => {
-  // const URL = import.meta.env.URL;
-  // console.log(URL);
   const [userMail, setUserMail] = useState("");
   const [userPass, setUserPass] = useState("");
   const navigate = useNavigate();
-  // console.log(userMail);
+
   function handleSubmit(e) {
     e.preventDefault();
-    // console.log(userMail, userPass);
     const data = {
       email: userMail,
       password: userPass,
     };
-    // setUserMail("");
-    // setUserPass("");
-    console.log(data);
     axios
-      .post(
-        `http://localhost:4000/api/v1/login`,
-        { ...data },
-        { withCredentials: true }
-      )
+      .post(`${__URL__}/login`, { ...data }, { withCredentials: true })
       .then((response) => {
         // console.log(response.data);
         if (response.data?.status === "success") {
@@ -66,14 +56,24 @@ const Login = () => {
             placeholder="PASSWORD"
             onChange={(e) => setUserPass(e.target.value)}
           ></input>
-          <a href="/forgot-password" className="forgot-password">
+          <p
+            className="forgot-password"
+            onClick={() => {
+              navigate("/forgot-password");
+            }}
+          >
             Forgot password
-          </a>
+          </p>
           <button className="submit-button">Submit</button>
           <p className="register-footer">Don't have an account?</p>
-          <a href="/register" className="register-redirect">
+          <button
+            className="register-redirect"
+            onClick={() => {
+              navigate("/register");
+            }}
+          >
             Sign Up
-          </a>
+          </button>
         </form>
       </div>
     </div>
