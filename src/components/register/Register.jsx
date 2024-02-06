@@ -35,7 +35,7 @@ const Register = () => {
       })
       .catch((error) => {
         // console.log(error);
-        alert(error.response.data.error);
+        alert("Your password is too short, must contain atleast 8 characters.");
       });
   };
 
