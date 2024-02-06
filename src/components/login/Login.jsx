@@ -18,18 +18,13 @@ const Login = () => {
     axios
       .post(`${__URL__}/login`, { ...data }, { withCredentials: true })
       .then((response) => {
-        // console.log(response.data);
         if (response.data?.status === "success") {
           alert(response.data?.message);
           navigate("/");
         }
-        // axios
-        //   .post(`${URL}/user`)
-        //   .then((response) => console.log(response))
-        //   .catch((err) => console.log(err));
       })
       .catch((err) => {
-        alert(err.response.data.error);
+        alert("Password too small, must contain atleast 8 characters.");
       });
   }
 

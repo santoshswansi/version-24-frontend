@@ -2,7 +2,6 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import "./Register.css";
-// import versionLogo from "/version.svg";
 
 const Register = () => {
   const [username, setUsername] = useState("");
@@ -36,7 +35,7 @@ const Register = () => {
       })
       .catch((error) => {
         // console.log(error);
-        alert(error.response.data.error);
+        alert("Your password is too short, must contain atleast 8 characters.");
       });
   };
 

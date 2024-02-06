@@ -11,28 +11,32 @@ function ForgotPassword() {
   const navigate = useNavigate();
   const handleSubmit = (e) => {
     e.preventDefault();
-    setToggle(false);
     axios
-      .post(`${__URL__}/`, { email: Email })
+      .post(`${__URL__}/generateotp`, { email: Email })
       .then((res) => {
-        console.log(res);
+        alert("OTP sent! Kindly check your email");
+        setToggle(false);
       })
-      .catch((err) => console.log(err));
-    setEmail("");
+      .catch((err) => alert(err.res.body.message));
   };
 
   const handleOTPSubmit = (e) => {
     e.preventDefault();
-    setToggle(true);
     axios
-      .post(`${__URL__}/forgot-password`, {
-        otp,
-        newPassword,
+      .post(`${__URL__}/resetpassword`, {
+        email: Email,
+        otp: otp,
+        password: newPassword,
       })
       .then((res) => {
         console.log(res);
+        alert(res.data.message);
+        setEmail("");
+        setNewPassword("");
+        setOTP("");
+        navigate("/login");
       })
-      .catch((err) => console.log(err));
+      .catch((err) => alert(err.res.data.message));
   };
 
   return (
@@ -75,7 +79,7 @@ function ForgotPassword() {
             />
             <label htmlFor="password">New Password</label>
             <input
-              type="text"
+              type="password"
               name="password"
               value={newPassword}
               onChange={(e) => setNewPassword(e.target.value)}
