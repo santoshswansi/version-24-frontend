@@ -1,3 +1,11 @@
 #events-wrapper {
- background: url('../../assets/photos/3d-rendering-geometric-shapes-1.jpg') repeat;
+  background: url("../../assets/photos/3d-rendering-geometric-shapes-1.jpg")
+    repeat;
+  /* background: linear-gradient(
+    -225deg,
+     #3798b0,
+    #0f1035
+  );
+  */
+  height: 100%;
 }

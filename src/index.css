@@ -115,9 +115,10 @@
   -webkit-box-reflect: below 0px linear-gradient(transparent, #0002);
   transition: 0.25s;
   transition-delay: 0.75s;
+  cursor: pointer;
 }
 
-@media (hover: hover){
+@media (hover: hover) {
   .Button button:hover {
     transition-delay: 0.75s;
     color: white;
@@ -139,7 +140,7 @@
   transition-delay: 0.5s, 0.25s, 0s, 0s;
 }
 
-@media (hover: hover){
+@media (hover: hover) {
   .Button button:hover::before {
     width: 60%;
     height: 110%;
@@ -163,7 +164,7 @@
   transition-delay: 0.5s, 0.25s, 0s, 0s;
 }
 
-@media (hover: hover){
+@media (hover: hover) {
   .Button button:hover::after {
     width: 60%;
     height: 110%;
