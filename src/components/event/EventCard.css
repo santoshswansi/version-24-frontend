@@ -18,7 +18,7 @@
   -webkit-backdrop-filter: blur(2px);
   border: 1px solid rgba(255, 255, 255, 0.3);
 }
-  
+
 .EventCard .card {
   height: 100%;
   width: 100%;
@@ -26,16 +26,14 @@
   transition: transform 800ms;
 }
 
-@media (hover: hover){
-  .EventCard:hover > .card {
-    transform: rotateY(180deg);
-    transform-style: preserve-3d;
-    transition-delay: 0.25s;
-  }
+.EventCard:hover > .card {
+  transform: rotateY(180deg);
+  transform-style: preserve-3d;
+  transition-delay: 0.25s;
 }
 
 .EventCard .front {
-  background-image: url("src/assets/photos/young-adult-playing-futuristic-virtual-reality-game-generated-by-ai_188544-32742.jpg");
+  /* background-image: url("src/assets/photos/young-adult-playing-futuristic-virtual-reality-game-generated-by-ai_188544-32742.jpg"); */
   background-size: cover;
   background-position: center;
 }
@@ -55,7 +53,12 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(45deg, #dcf2f1, #7fc7d9);
+  /* background: linear-gradient(45deg, #dcf2f1, #7fc7d9); */
   transform: rotateY(180deg);
   gap: 2rem;
+}
+
+.EventCard .back h2 {
+  font-family: "Playfair Display";
+  font-weight: 800;
 }
