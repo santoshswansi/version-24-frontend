@@ -122,7 +122,7 @@
   .Button button:hover {
     transition-delay: 0.75s;
     color: white;
-    box-shadow: 0 0 10px #0f1035, 0 0 20px #0f1035;
+    box-shadow: 0 0 10px black, 0 0 20px black;
   }
 }
 
@@ -134,8 +134,8 @@
   transform: translateY(-50%);
   width: 20px;
   height: 2px;
-  background: #0f1035;
-  box-shadow: 5px -8px 0 #0f1035, 5px 8px 0 #0f1035;
+  background: black;
+  box-shadow: 5px -8px 0 black, 5px 8px 0 black;
   transition: width 0.25s, left 0.25s, height 0.25s, box-shadow 0.25s;
   transition-delay: 0.5s, 0.25s, 0s, 0s;
 }
@@ -145,7 +145,7 @@
     width: 60%;
     height: 110%;
     left: -2px;
-    box-shadow: 5px 0 0 #0f1035, 5px 0 0 #0f1035;
+    box-shadow: 5px 0 0 black, 5px 0 0 black;
     transition-delay: 0s, 0.25s, 0.5s, 0.5s;
   }
 }
@@ -158,8 +158,8 @@
   transform: translateY(-50%);
   width: 20px;
   height: 2px;
-  background: #0f1035;
-  box-shadow: -5px -8px 0 #0f1035, -5px 8px 0 #0f1035;
+  background: black;
+  box-shadow: -5px -8px 0 black, -5px 8px 0 black;
   transition: width 0.25s, left 0.25s, height 0.25s, box-shadow 0.25s;
   transition-delay: 0.5s, 0.25s, 0s, 0s;
 }
@@ -169,7 +169,7 @@
     width: 60%;
     height: 110%;
     right: -2px;
-    box-shadow: -5px 0 0 #0f1035, -5px 0 0 #0f1035;
+    box-shadow: -5px 0 0 black, -5px 0 0 black;
     transition-delay: 0s, 0.25s, 0.5s, 0.5s;
   }
 }
