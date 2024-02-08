@@ -5,7 +5,7 @@
   margin: 20px;
   padding: 20px;
   font-family: "Montserrat";
-  font-weight: 300;
+  font-weight: 700;
   /* From https://css.glass */
   background: linear-gradient(
     90deg,
@@ -55,10 +55,12 @@
   align-items: center;
   /* background: linear-gradient(45deg, #dcf2f1, #7fc7d9); */
   transform: rotateY(180deg);
-  gap: 2rem;
+  gap: 1rem;
 }
 
 .EventCard .back h2 {
   font-family: "Playfair Display";
   font-weight: 800;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
