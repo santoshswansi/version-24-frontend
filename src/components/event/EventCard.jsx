@@ -1,4 +1,6 @@
 import "./EventCard.css";
+import { MdCalendarMonth } from "react-icons/md";
+import { LuAlarmClock } from "react-icons/lu";
 import Button from "./Button";
 import Modal from "./Modal";
 import { useState } from "react";
@@ -33,7 +35,12 @@ const EventCard = ({ eventProp }) => {
         ></div>
         <div className="back">
           <h2>{name}</h2>
-          <p> Info about date and time. </p>
+          <p>
+            <MdCalendarMonth /> Date: {date}
+          </p>
+          <p>
+            <LuAlarmClock /> Time: {time}
+          </p>
           <Button onClick={() => setOpenModal(true)}>Register</Button>
           {openModal && mainModal}
         </div>

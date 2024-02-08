@@ -4,7 +4,7 @@ const eventData = [
     name: "Insight",
     date: "07-02-2024",
     time: "5:30 PM",
-    thumbnail: "src/assets/photos/Insight.png",
+    thumbnail: "/Insight.png",
     description: `Join the 1-hour guest lecture by the chief guest of Version 24, delving
       into Generative AI. Explore its advancements, challenges, and ethical
       dimensions. Discover practical applications and industry use cases,
@@ -16,7 +16,7 @@ const eventData = [
     name: "CodeBlitz",
     date: "07-02-2024",
     time: "5:30 PM",
-    thumbnail: "src/assets/photos/codeblitz.png",
+    thumbnail: "/codeblitz.png",
     description: `The coding event consists of two rounds. The first round is online, to
       be held a month prior to the event. Participants solve 3-4
       algorithmic problems in 2 hours individually, using any programming
@@ -28,7 +28,7 @@ const eventData = [
     name: "Cryptic Coder",
     date: "07-02-2024",
     time: "5:30 PM",
-    thumbnail: "src/assets/photos/CrypticCoder.jpg",
+    thumbnail: "/CrypticCoder.jpg",
     description: `CrypticCoder offers a challenging competition where participants
       must unravel and debug jumbled code within a 1-hour timeframe. The
       contest comprises four intricate questions, assessing coding aptitude
@@ -40,7 +40,7 @@ const eventData = [
     name: "ImmerseCraft",
     date: "07-02-2024",
     time: "5:30 PM",
-    thumbnail: "src/assets/photos/ImmerseCraft.jpg",
+    thumbnail: "/ImmerseCraft.jpg",
     description: `Generative Image Marvels invites participants to explore creativity
       through Generative AI tools. Given a theme, participants unleash
       imagination, creating captivating visuals with no tool or image
@@ -53,7 +53,7 @@ const eventData = [
     name: "DecodeCraft",
     date: "07-02-2024",
     time: "5:30 PM",
-    thumbnail: "src/assets/photos/decodeCraft.png",
+    thumbnail: "/decodeCraft.png",
     description: `Join the 1-hour fun-coding event where participants decode
       input/output examples to unveil problem statements. Translate
       deciphered problems into functional code against the clock. Top
@@ -65,7 +65,7 @@ const eventData = [
     name: "Game Fiesta",
     date: "07-02-2024",
     time: "5:30 PM",
-    thumbnail: "src/assets/photos/Apocalypse.png",
+    thumbnail: "/Apocalypse.png",
     description: `The gaming event of Version’24. The game Zombie Apocalypse is a
       third person shooter PC game developed by our second year MCA
       student, Rishabh Jain (who also made this web page :D). In order to win, you must achieve a score
@@ -77,7 +77,7 @@ const eventData = [
     name: "Squid Quiz",
     date: "07-02-2024",
     time: "5:30 PM",
-    thumbnail: "src/assets/photos/SquidQuiz.jpg",
+    thumbnail: "/SquidQuiz.jpg",
     description: `Squid Quiz, inspired by Squid Game, challenges participants with
       rapid-fire questions and strict time limits. A wrong answer leads to
       elimination, mimicking the high-stakes nature of Squid Game. The
@@ -90,7 +90,7 @@ const eventData = [
     name: "DevDay",
     date: "07-02-2024",
     time: "5:30 PM",
-    thumbnail: "src/assets/photos/DEVDAY.png",
+    thumbnail: "/DEVDAY.png",
     description: `It is a team event where participants will be given some problem
     statements (basically some dev work) which they have to build. It
     won't be really difficult and won't be really easy as well. This will
@@ -104,7 +104,7 @@ const eventData = [
     name: "Heads Up",
     date: "07-02-2024",
     time: "5:30 PM",
-    thumbnail: "src/assets/photos/HEADSUP.png",
+    thumbnail: "/HEADSUP.png",
     description: `Teams of 4-5 players, one with a phone near their forehead, try to
     guess words their teammates convey without speaking. Non-verbal
     clues determine success, with the team conveying the most words
@@ -115,7 +115,7 @@ const eventData = [
     name: "Cupocalyse Combat",
     date: "07-02-2024",
     time: "5:30 PM",
-    thumbnail: "src/assets/photos/Cupocalypse.jpg",
+    thumbnail: "/Cupocalypse.jpg",
     description: `It is a 3-member team event where each team member will serve one
     of the below three roles:
     1. Constructor: Builds the castle using cups for defense.
@@ -130,7 +130,7 @@ const eventData = [
     name: "Map Quest",
     date: "07-02-2024",
     time: "5:30 PM",
-    thumbnail: "src/assets/photos/MapQuest.png",
+    thumbnail: "/MapQuest.png",
     description: `A unique digital treasure hunting experience
     1. Treasure hunters embark on three sequential routes, each displayed
     on a map.
@@ -146,7 +146,7 @@ const eventData = [
     name: "Destinite",
     date: "07-02-2024",
     time: "5:30 PM",
-    thumbnail: "src/assets/photos/DESTINITE.png",
+    thumbnail: "/DESTINITE.png",
     description: `An exclusive interview round for Version'24 top performers. The top
     3 participants, selected based on their exceptional performance
     throughout the events, will undergo a mock PI after submitting their
