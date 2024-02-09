@@ -1,0 +1,111 @@
+[{
+    "title":"Head of the Department",
+    "subTitle":"",
+    "members":[
+        {
+            "personName":"Dr. Michael Arock",
+            "personImg":"hod.jpg",
+            "linkedInLink":"https://www.linkedin.com/in/michael-arock-720b6687/",
+            "githubLink":"#"
+        }
+    ]
+},
+{
+    "title":"Staff Advisor",
+    "subTitle":"",
+    "members":[
+        {
+            "personName":"Dr.(Mrs.) S. Sangeetha",
+            "personImg":"sangeetha-mam.jpg",
+            "linkedInLink":"#",
+            "githubLink":"#"
+        },
+        {
+            "personName":"Dr. B. Janet",
+            "personImg":"default.png",
+            "linkedInLink":"#",
+            "githubLink":"#"
+        }
+    ]
+},
+{
+    "title":"Event Execution Committee",
+    "subTitle":"Chairperson of Committee",
+    "members":[
+        {
+            "personName":"Amit Kumar",
+            "personImg":"default.png",
+            "linkedInLink":"#",
+            "githubLink":"#"
+        }
+    ]
+},
+{
+    "title":"Members",
+    "subTitle":"",
+    "members":[
+        {
+            "personName":"ABC XYZ",
+            "personImg":"default.png",
+            "linkedInLink":"#",
+            "githubLink":"#"
+        },
+        {
+            "personName":"ABC XYZ",
+            "personImg":"default.png",
+            "linkedInLink":"#",
+            "githubLink":"#"
+        },
+        {
+            "personName":"ABC XYZ",
+            "personImg":"default.png",
+            "linkedInLink":"#",
+            "githubLink":"#"
+        },
+        {
+            "personName":"ABC XYZ",
+            "personImg":"default.png",
+            "linkedInLink":"#",
+            "githubLink":"#"
+        },
+        {
+            "personName":"ABC XYZ",
+            "personImg":"default.png",
+            "linkedInLink":"#",
+            "githubLink":"#"
+        },
+        {
+            "personName":"ABC XYZ",
+            "personImg":"default.png",
+            "linkedInLink":"#",
+            "githubLink":"#"
+        },
+        {
+            "personName":"ABC XYZ",
+            "personImg":"default.png",
+            "linkedInLink":"#",
+            "githubLink":"#"
+        },
+        {
+            "personName":"ABC XYZ",
+            "personImg":"default.png",
+            "linkedInLink":"#",
+            "githubLink":"#"
+        },
+        {
+            "personName":"ABC XYZ",
+            "personImg":"default.png",
+            "linkedInLink":"#",
+            "githubLink":"#"
+        },
+        {
+            "personName":"ABC XYZ",
+            "personImg":"default.png",
+            "linkedInLink":"#",
+            "githubLink":"#"
+        }
+    ]
+}
+    
+    
+]
