@@ -10,7 +10,12 @@ const Navbar = ({ expanded, setExpanded }) => {
   
   return (
     <div id="collapse-nav-container">
-      <img src={versionLogo} alt="Version logo" id="collapse-logo" />
+      <img
+        src={versionLogo}
+        alt="Version logo"
+        id="collapse-logo"
+        onClick={() => navigate("/")}
+      />
       <div id="collapse-nav">
         <a className="collapse-nav-item" onClick={() => navigate("/")}>
           Home
@@ -18,7 +23,7 @@ const Navbar = ({ expanded, setExpanded }) => {
         <a className="collapse-nav-item" onClick={() => navigate("/about")}>
           About
         </a>
-        <a className="collapse-nav-item" onClick={() => navigate("/events")} >
+        <a className="collapse-nav-item" onClick={() => navigate("/events")}>
           Events
         </a>
         <a className="collapse-nav-item" onClick={() => navigate("/teams")}>

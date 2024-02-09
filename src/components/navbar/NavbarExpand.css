@@ -27,6 +27,7 @@
 
 #expand-logo {
   height: 1.7rem;
+  cursor: pointer;
 }
 
 #expand-nav {

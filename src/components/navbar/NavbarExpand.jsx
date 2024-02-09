@@ -11,7 +11,12 @@ function NavbarExpand({ expanded, setExpanded, focus }) {
   return (
     <div id="expand-nav-wrapper" className={expanded ? "on-expand" : ""}>
       <div id="expand-nav-header">
-        <img src={versionLogo} alt="Version logo" id="expand-logo" />
+        <img
+          src={versionLogo}
+          alt="Version logo"
+          id="expand-logo"
+          onClick={() => navigate("/")}
+        />
         <div id="cross-container" onClick={() => setExpanded(!expanded)}>
           <img src={cross} alt="Cross" id="cross" />
         </div>
