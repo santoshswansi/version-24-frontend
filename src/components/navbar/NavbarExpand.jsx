@@ -1,9 +1,6 @@
 /* eslint-disable react/prop-types */
 import "./NavbarExpand.css";
 import {useNavigate} from "react-router-dom"
-import versionLogo from "../../assets/svg/version.svg";
-import cross from "../../assets/svg/cross.svg";
-import arrowRight from "../../assets/svg/arrow-right.svg";
 
 function NavbarExpand({ expanded, setExpanded, focus }) {
   const navigate = useNavigate();
@@ -12,13 +9,13 @@ function NavbarExpand({ expanded, setExpanded, focus }) {
     <div id="expand-nav-wrapper" className={expanded ? "on-expand" : ""}>
       <div id="expand-nav-header">
         <img
-          src={versionLogo}
+          src="/version.svg"
           alt="Version logo"
           id="expand-logo"
           onClick={() => navigate("/")}
         />
         <div id="cross-container" onClick={() => setExpanded(!expanded)}>
-          <img src={cross} alt="Cross" id="cross" />
+          <img src="/cross.svg" alt="Cross" id="cross" />
         </div>
       </div>
 
@@ -55,11 +52,11 @@ function NavbarExpand({ expanded, setExpanded, focus }) {
       <div id="connect">
         <div id="contact">
           <a href="mailto:versionmcanitt@gmail.com">
-            <img src={arrowRight} className="arrow" alt="arrow" />
+            <img src="/arrow-right.svg" className="arrow" alt="arrow" />
             versionmcanitt@gmail.com
           </a>
           <a href="tel:8116002093">
-            <img src={arrowRight} className="arrow" alt="arrow" />
+            <img src="/arrow-right.svg" className="arrow" alt="arrow" />
             8116002093
           </a>
         </div>
@@ -69,7 +66,7 @@ function NavbarExpand({ expanded, setExpanded, focus }) {
             target="_blank"
             rel="noreferrer"
           >
-            <img src={arrowRight} className="arrow" alt="arrow" />
+            <img src="/arrow-right.svg" className="arrow" alt="arrow" />
             INSTAGRAM
           </a>
           <a
@@ -77,7 +74,7 @@ function NavbarExpand({ expanded, setExpanded, focus }) {
             target="_blank"
             rel="noreferrer"
           >
-            <img src={arrowRight} className="arrow" alt="arrow" />
+            <img src="/arrow-right.svg" className="arrow" alt="arrow" />
             LINKEDIN
           </a>
           <a
@@ -85,7 +82,7 @@ function NavbarExpand({ expanded, setExpanded, focus }) {
             target="_blank"
             rel="noreferrer"
           >
-            <img src={arrowRight} className="arrow" alt="arrow" />
+            <img src="/arrow-right.svg" className="arrow" alt="arrow" />
             YOUTUBE
           </a>
         </div>

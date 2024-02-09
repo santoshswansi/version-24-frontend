@@ -2,8 +2,6 @@
 import "./Navbar.css";
 import { useNavigate } from "react-router-dom";
 
-import versionLogo from "../../assets/svg/version.svg";
-import dots from "../../assets/svg/dots.svg";
 
 const Navbar = ({ expanded, setExpanded }) => {
   const navigate = useNavigate();
@@ -11,7 +9,7 @@ const Navbar = ({ expanded, setExpanded }) => {
   return (
     <div id="collapse-nav-container">
       <img
-        src={versionLogo}
+        src="/version.svg"
         alt="Version logo"
         id="collapse-logo"
         onClick={() => navigate("/")}
@@ -33,7 +31,7 @@ const Navbar = ({ expanded, setExpanded }) => {
           Login
         </a>
         <div id="dots-container" onClick={() => setExpanded(!expanded)}>
-          <img src={dots} alt="Dots" id="dots" />
+          <img src="/dots.svg" alt="Dots" id="dots" />
         </div>
       </div>
     </div>

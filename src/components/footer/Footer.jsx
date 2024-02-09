@@ -2,10 +2,6 @@
 /* eslint-disable react/prop-types */
 import './Footer.css'
 
-import instagram from "../../assets/svg/instagram.svg"
-import youtube from "../../assets/svg/youtube.svg"
-import linkedin from "../../assets/svg/linkedin.svg"
-
 const Footer = () => {
 
   return (
@@ -18,21 +14,21 @@ const Footer = () => {
             target="_blank"
             rel="noreferrer"
           >
-            <img src={instagram} />
+            <img src="/instagram.svg" />
           </a>
           <a
             href="https://www.linkedin.com/in/version-mca-nitt-4b2384221/"
             target="_blank"
             rel="noreferrer"
           >
-            <img src={linkedin} />
+            <img src="/linkedin.svg" />
           </a>
           <a
             href="https://www.youtube.com/version_nit_trichy"
             target="_blank"
             rel="noreferrer"
           >
-            <img src={youtube} />
+            <img src="/youtube.svg" />
           </a>
         </div>
       </div>
